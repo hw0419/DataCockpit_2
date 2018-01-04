@@ -21,23 +21,27 @@
 	                  ],
 	      "columnDefs": [	                     
 					{
-	    		    "targets": 6,
-	    		    /* "data": "title", */
-	    		    "render": function ( data, type, row, meta ) {
-	    		    /* 将当前值传入controller */	  
-	    		     return '<a href="./aduser_update.shtml?id='+row.id+'" class="button button-primary button-rounded button-small" style="font-size: 10.5px;font-weight: bolder; ">编辑</a>';   		    		
-	    		    }
+	    		   	 	"targets": 6,
+	    		   		 /* "data": "title", */
+	    		       "render": function ( data, type, row, meta ) {
+	 	    		    /* 将当前值传入controller */	  
+	 	    		    /* <button class="button button-3d button-action button-circle button-jumbo"  ><i class="fa fa-thumbs-up">编辑</i></button> */
+	 	    		    if (row.state == 0) {
+							return '<div class="form-group"><select class="form-control" onchange="qiyong('+row.id+')"><option>已启用</option><option selected="selected">已禁用</option></select>';
+						} else if(row.state == 1){
+							return '<div class="form-group"><select class="form-control" onchange="jinyong('+row.id+')"><option selected="selected">已启用</option><option>已禁用</option></select>';
+						} else {
+							
+						}
+	 	    		 }
 	    		  },
 					{
 	 	    		    "targets": 7,
 	 	    		    /* "data": "title", */
-	 	    		    "render": function ( data, type, row, meta ) {
-	 	    		    /* 将当前值传入controller */	  
-	 	    		    /* <button class="button button-3d button-action button-circle button-jumbo"  ><i class="fa fa-thumbs-up">编辑</i></button> */
-	 	    		     return '<a href="./aduser_update1.shtml?id='+row.id+'" onclick="return ee();" class="button button-primary button-rounded button-small" style="font-size: 10.5px;font-weight: bolder; ">启用</a>\
-	    		    			&emsp;\
-	    		    			<a href="./aduser_update0.shtml?id='+row.id+'" onclick="return dd();" class="button button-primary button-rounded button-small" style="font-size: 10.5px;font-weight: bolder; ">禁用</a>';	 	    		    			    
-	 	    		 }
+	    		  		"render": function ( data, type, row, meta ) {
+		    		    /* 将当前值传入controller */	  
+		    		     return '<a href="./aduser_update.shtml?id='+row.id+'" class="button button-primary button-rounded button-small" style="font-size: 10.5px;font-weight: bolder; ">编辑</a>';   		    		
+		    		    }
 	 	    	   }
 	      ],	    
 	            
@@ -55,6 +59,6 @@
   })
 </script>
 <script language="jscript"> 
-	function ee() { if(confirm("请确认是否启用?" )) return true; return false;  }
-	function dd() { if(confirm("请确认是否禁用?" )) return true; return false;  }
+	function qiyong(val){ window.location.href = "./aduser_update1.shtml?id="+val+""; }
+	function jinyong(val){ window.location.href = "./aduser_update0.shtml?id="+val+""; }
 </script>
