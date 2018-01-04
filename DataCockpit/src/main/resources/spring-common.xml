@@ -74,6 +74,7 @@
 		    <!-- Shiro连接约束配置,即过滤链的定义 -->  
 		    <property name="filterChainDefinitions">  
 		        <value>  
+		        	/**=anon
 		            /login.jsp=anon
 		            /pages/register.jsp=anon
 		            /pages/wangjimima.jsp=anon

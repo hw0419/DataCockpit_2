@@ -15,7 +15,13 @@
 		<jackson.version>2.1.4</jackson.version>
 	</properties>
 	<dependencies>
-
+		
+		<!-- p6spy -->
+		<dependency>
+			<groupId>p6spy</groupId>
+			<artifactId>p6spy</artifactId>
+			<version>2.1.4</version>
+		</dependency>
 
 		<dependency>
 			<groupId>org.apache.tiles</groupId>

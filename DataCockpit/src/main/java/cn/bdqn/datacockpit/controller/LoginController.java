@@ -177,6 +177,7 @@ public class LoginController {
      */
     @RequestMapping("/register")
     public String register(Companyinfo cominfo) {
+        cominfo.setState(0);
         int flag = companyinfo.insert(cominfo);
         if (flag >= 1) {
             return "front/shenqing.jsp";
