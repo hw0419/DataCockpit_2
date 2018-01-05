@@ -139,7 +139,6 @@ public class JdbcUtil {
      * @return
      * @throws Exception
      */
-    @SuppressWarnings("unchecked")
     public static boolean getAllTableName(JdbcTemplate jt, String tableName) throws Exception {
         Connection conn = jt.getDataSource().getConnection();
         ResultSet tabs = null;

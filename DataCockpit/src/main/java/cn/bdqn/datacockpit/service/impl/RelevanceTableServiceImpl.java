@@ -35,8 +35,8 @@ public class RelevanceTableServiceImpl implements RelevanceTableService {
 
     @Override
     public List<Map<String, Object>> selectAllTables() throws Exception {
-
-        return rtm.selectAll();
+        
+    	return rtm.selectAll();
     }
 
 }
