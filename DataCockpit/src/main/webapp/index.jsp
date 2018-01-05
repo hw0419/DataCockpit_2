@@ -13,7 +13,7 @@
 </head>
 <body>
 <script type="text/javascript">
-	window.location.href="<%=basePath %>/login.jsp";
+	window.location.href="<%=basePath %>/tiles/admin/admin_index.jsp";
 </script>
 </body>
 </html>
