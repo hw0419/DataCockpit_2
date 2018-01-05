@@ -23,7 +23,6 @@ import cn.bdqn.datacockpit.datatable.SearchCondition;
 import cn.bdqn.datacockpit.entity.Companyinfo;
 import cn.bdqn.datacockpit.entity.Tableinfo;
 import cn.bdqn.datacockpit.service.TableinfoService;
-import cn.bdqn.datacockpit.service.XsTableService;
 import cn.bdqn.datacockpit.utils.JdbcUtil;
 
 /**
@@ -45,68 +44,69 @@ import cn.bdqn.datacockpit.utils.JdbcUtil;
  */
 @Controller
 public class Json2Controller {
-    @Autowired
-    private XsTableService xs;
+	// @Autowired
+	// private XsTableService xs;
 
-    @Autowired
-    private TableinfoService ts;
+	@Autowired
+	private TableinfoService ts;
 
-    @ResponseBody
-    @RequestMapping(value = "shuju_1")
-    public DatatableResult<Map<String, String>> datatable2(@RequestBody SearchCondition searchCondition) {
-        DatatableResult<Map<String, String>> list = new DatatableResult<>();
-        Map<String, String> map = new HashMap<String, String>();
-        map.put("startTime", "1995-3-5 16:20:21");
-        map.put("stopTime", "1995-7-5 16:20:21");
-        map.put("zt", "已完成");
-        List<Map<String, String>> lists = new ArrayList<Map<String, String>>();
-        lists.add(map);
-        list.setData(lists);
-        return list;
-    }
+	@ResponseBody
+	@RequestMapping(value = "shuju_1")
+	public DatatableResult<Map<String, String>> datatable2(@RequestBody SearchCondition searchCondition) {
+		DatatableResult<Map<String, String>> list = new DatatableResult<>();
+		Map<String, String> map = new HashMap<String, String>();
+		map.put("startTime", "1995-3-5 16:20:21");
+		map.put("stopTime", "1995-7-5 16:20:21");
+		map.put("zt", "已完成");
+		List<Map<String, String>> lists = new ArrayList<Map<String, String>>();
+		lists.add(map);
+		list.setData(lists);
+		return list;
+	}
 
-    @ResponseBody
-    @RequestMapping(value = "shuju_2")
-    public DatatableResult<Tableinfo> datatable(@IsSearchCondition SearchCondition searchCondition,
-            HttpServletRequest req) {
-        DatatableResult<Tableinfo> list = new DatatableResult<>();
-        HttpSession session = req.getSession();
-        Companyinfo cy = (Companyinfo) session.getAttribute("infos");
-        Integer id = cy.getId();
+	@ResponseBody
+	@RequestMapping(value = "shuju_2")
+	public DatatableResult<Tableinfo> datatable(@IsSearchCondition SearchCondition searchCondition,
+			HttpServletRequest req) {
+		DatatableResult<Tableinfo> list = new DatatableResult<>();
+		HttpSession session = req.getSession();
+		Companyinfo cy = (Companyinfo) session.getAttribute("infos");
+		Integer id = cy.getId();
 
-        List<Tableinfo> lists = ts.selectAll(id);
-        list.setData(lists);
-        return list;
-    }
+		List<Tableinfo> lists = ts.selectAll(id);
+		list.setData(lists);
+		return list;
+	}
 
-    @ResponseBody
-    @RequestMapping(value = "shujus_2")
-    public DatatableResult<Tableinfo> datatable6(@RequestBody SearchCondition searchCondition, HttpServletRequest req) {
-        DatatableResult<Tableinfo> list = new DatatableResult<>();
-        HttpSession session = req.getSession();
-        HttpSession session1 = req.getSession();
-        String ids = (String) session1.getAttribute("No1");
+	@ResponseBody
+	@RequestMapping(value = "shujus_2")
+	public DatatableResult<Tableinfo> datatable6(@RequestBody SearchCondition searchCondition, HttpServletRequest req) {
+		DatatableResult<Tableinfo> list = new DatatableResult<>();
+		// HttpSession session = req.getSession();
+		HttpSession session1 = req.getSession();
+		String ids = (String) session1.getAttribute("No1");
 
-        Integer id = Integer.parseInt(ids);
-        List<Tableinfo> lists = ts.selectAll(id);
-        System.out.println(lists);
-        list.setData(lists);
-        return list;
-    }
+		Integer id = Integer.parseInt(ids);
+		List<Tableinfo> lists = ts.selectAll(id);
+		System.out.println(lists);
+		list.setData(lists);
+		return list;
+	}
 
-    @ResponseBody
-    @RequestMapping(value = "shuju_3")
-    public DatatableResult<Map<String, Object>> datatable3(@IsSearchCondition SearchCondition searchCondition,
-            HttpServletRequest req) {
-        DatatableResult<Map<String, Object>> list = new DatatableResult<>();
-        String name = req.getParameter("id");
-        JdbcUtil jdbc1 = new JdbcUtil();
-        ApplicationContext context = jdbc1.getContext();
-        context = new ClassPathXmlApplicationContext("spring-common.xml");
-        JdbcTemplate jt = (JdbcTemplate) context.getBean("jdbcTemplate");
-        List<Map<String, Object>> lists = jdbc1.selectObj(jt, name);
+	@SuppressWarnings("resource")
+	@ResponseBody
+	@RequestMapping(value = "shuju_3")
+	public DatatableResult<Map<String, Object>> datatable3(@IsSearchCondition SearchCondition searchCondition,
+			HttpServletRequest req) {
+		DatatableResult<Map<String, Object>> list = new DatatableResult<>();
+		String name = req.getParameter("id");
+		// JdbcUtil jdbc1 = new JdbcUtil();
+		ApplicationContext context = JdbcUtil.getContext();
+		context = new ClassPathXmlApplicationContext("spring-common.xml");
+		JdbcTemplate jt = (JdbcTemplate) context.getBean("jdbcTemplate");
+		List<Map<String, Object>> lists = JdbcUtil.selectObj(jt, name);
 
-        list.setData(lists);
-        return list;
-    }
+		list.setData(lists);
+		return list;
+	}
 }

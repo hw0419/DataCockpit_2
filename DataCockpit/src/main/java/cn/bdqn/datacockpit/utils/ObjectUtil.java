@@ -26,11 +26,10 @@ public class ObjectUtil {
     /**
      * 返回一个对象的属性和属性值
      */
-    @SuppressWarnings("unchecked")
     public static Map<String, String> getProperty(Object entityName) {
         Map<String, String> map = new HashMap<String, String>();
         try {
-            Class c = entityName.getClass();
+            Class<? extends Object> c = entityName.getClass();
             // 获得对象属性
             Field field[] = c.getDeclaredFields();
             for (Field f : field) {
@@ -46,9 +45,8 @@ public class ObjectUtil {
     /**
      * 获得对象属性的值
      */
-    @SuppressWarnings("unchecked")
     private static Object invokeMethod(Object owner, String methodName, Object[] args) throws Exception {
-        Class ownerClass = owner.getClass();
+        Class<? extends Object> ownerClass = owner.getClass();
         methodName = methodName.substring(0, 1).toUpperCase() + methodName.substring(1);
         Method method = null;
         try {

@@ -36,60 +36,60 @@ import cn.bdqn.datacockpit.service.UserinfoService;
  */
 @Controller
 public class JsonController {
-    @Autowired
-    private UserinfoService us;
+	@Autowired
+	private UserinfoService us;
 
-    @Autowired
-    private InfoService ifo;
+	@Autowired
+	private InfoService ifo;
 
-    @Autowired
-    private CompanyinfoService cfs;
+	@Autowired
+	private CompanyinfoService cfs;
 
-    @RequestMapping(value = "dt_list")
-    public DatatableResult<Userinfo> datatable(@IsSearchCondition SearchCondition searchCondition) {
-        DatatableResult<Userinfo> list = new DatatableResult<>();
-        Userinfo rec = new Userinfo();
-        return list;
-    }
+	@RequestMapping(value = "dt_list")
+	public DatatableResult<Userinfo> datatable(@IsSearchCondition SearchCondition searchCondition) {
+		DatatableResult<Userinfo> list = new DatatableResult<>();
+		// Userinfo rec = new Userinfo();
+		return list;
+	}
 
-    @ResponseBody
-    @RequestMapping(value = "dt_list2")
-    public DatatableResult<Userinfo> datatable2(@RequestBody SearchCondition searchCondition) {
-        DatatableResult<Userinfo> list = new DatatableResult<>();
-        List<Userinfo> list2 = us.selectAllUserinfo();
-        list.setData(list2);
-        return list;
-    }
+	@ResponseBody
+	@RequestMapping(value = "dt_list2")
+	public DatatableResult<Userinfo> datatable2(@RequestBody SearchCondition searchCondition) {
+		DatatableResult<Userinfo> list = new DatatableResult<>();
+		List<Userinfo> list2 = us.selectAllUserinfo();
+		list.setData(list2);
+		return list;
+	}
 
-    @ResponseBody
-    @RequestMapping(value = "dt_lists3")
-    public DatatableResult<Info> datatable23(@RequestBody SearchCondition searchCondition) {
-        DatatableResult<Info> list = new DatatableResult<>();
-        List<Info> list2 = ifo.selectAllInfo();
-        list.setData(list2);
-        return list;
-    }
+	@ResponseBody
+	@RequestMapping(value = "dt_lists3")
+	public DatatableResult<Info> datatable23(@RequestBody SearchCondition searchCondition) {
+		DatatableResult<Info> list = new DatatableResult<>();
+		List<Info> list2 = ifo.selectAllInfo();
+		list.setData(list2);
+		return list;
+	}
 
-    /***
-     * 
-     * @param searchCondition:使用datatable获取companyInfo信息
-     * @return
-     */
-    @ResponseBody
-    @RequestMapping(value = "dt_lists4")
-    public DatatableResult<Companyinfo> datatable4(@RequestBody SearchCondition searchCondition) {
-        DatatableResult<Companyinfo> list = new DatatableResult<>();
-        List<Companyinfo> list2 = cfs.selectAllCompanies();
-        list.setData(list2);
-        return list;
-    }
-    
-    @ResponseBody
-    @RequestMapping(value = "dt_lists5")
-    public DatatableResult<Companyinfo> datatable5(@RequestBody SearchCondition searchCondition) {
-        DatatableResult<Companyinfo> list = new DatatableResult<>();
-        List<Companyinfo> list2 = cfs.getAllCompanies();
-        list.setData(list2);
-        return list;
-    }
+	/***
+	 * 
+	 * @param searchCondition:使用datatable获取companyInfo信息
+	 * @return
+	 */
+	@ResponseBody
+	@RequestMapping(value = "dt_lists4")
+	public DatatableResult<Companyinfo> datatable4(@RequestBody SearchCondition searchCondition) {
+		DatatableResult<Companyinfo> list = new DatatableResult<>();
+		List<Companyinfo> list2 = cfs.selectAllCompanies();
+		list.setData(list2);
+		return list;
+	}
+
+	@ResponseBody
+	@RequestMapping(value = "dt_lists5")
+	public DatatableResult<Companyinfo> datatable5(@RequestBody SearchCondition searchCondition) {
+		DatatableResult<Companyinfo> list = new DatatableResult<>();
+		List<Companyinfo> list2 = cfs.getAllCompanies();
+		list.setData(list2);
+		return list;
+	}
 }
