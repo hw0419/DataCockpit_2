@@ -83,4 +83,13 @@ public class JsonController {
         list.setData(list2);
         return list;
     }
+    
+    @ResponseBody
+    @RequestMapping(value = "dt_lists5")
+    public DatatableResult<Companyinfo> datatable5(@RequestBody SearchCondition searchCondition) {
+        DatatableResult<Companyinfo> list = new DatatableResult<>();
+        List<Companyinfo> list2 = cfs.getAllCompanies();
+        list.setData(list2);
+        return list;
+    }
 }

@@ -228,14 +228,12 @@ public class AdminTilesController {
     public String aduser_insert(Companyinfo comps) {
         // 获取实体类信息
         int flag = companyinfo.updateByPrimaryKey(comps);
-
-        System.out.println(flag);
         return "admin_userMan.page";
     }
 
     @RequestMapping("/admin_cominfo")
     public String cominfo(Model model) {
-        List<Companyinfo> lists = companyinfo.selectAllCompanies();
+        List<Companyinfo> lists = companyinfo.getAllCompanies();
         model.addAttribute("menus", "3");
         model.addAttribute("lists", lists);
         return "admin_cominfo.page";
@@ -294,7 +292,6 @@ public class AdminTilesController {
 
     @RequestMapping("/admin_userDsh")
     public String dshCompanyinfo(Model model) {
-
         List<Companyinfo> lists = companyinfo.selectAllCompanies();
         model.addAttribute("menus", "5");
         model.addAttribute("lists", lists);
@@ -304,8 +301,7 @@ public class AdminTilesController {
 
     @RequestMapping("/admin_userMan")
     public String userMan(Model model) {
-
-        List<Companyinfo> lists = companyinfo.selectAllCompanies();
+        List<Companyinfo> lists = companyinfo.getAllCompanies();
         model.addAttribute("menus", "4");
         model.addAttribute("lists", lists);
 
@@ -360,7 +356,6 @@ public class AdminTilesController {
     @RequestMapping("/admin_selects")
     public String selects(Model model) {
         List<Companyinfo> lists = companyinfo.selectAllCompanies();
-        System.out.println(lists);
         model.addAttribute("menus", "4");
         model.addAttribute("lists", lists);
         // 转发
@@ -395,7 +390,6 @@ public class AdminTilesController {
     public String adds(Model model) {
 
         List<Companyinfo> lists = companyinfo.selectAllCompanies();
-        System.out.println(lists);
         model.addAttribute("menus", "4");
         model.addAttribute("lists", lists);
 

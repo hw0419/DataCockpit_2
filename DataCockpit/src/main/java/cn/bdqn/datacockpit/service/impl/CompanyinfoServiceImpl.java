@@ -25,6 +25,12 @@ public class CompanyinfoServiceImpl implements CompanyinfoService {
     public List<Companyinfo> selectAllCompanies() {
         return companyinfo.selectAllCompanies();
     }
+    
+    @Override
+    public List<Companyinfo> getAllCompanies() {
+        return companyinfo.getAllCompanies();
+    }
+
 
     /**
      * 

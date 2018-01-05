@@ -7,6 +7,8 @@ import cn.bdqn.datacockpit.entity.Companyinfo;
 public interface CompanyinfoMapper {
 
     List<Companyinfo> selectAllCompanies();
+    
+    List<Companyinfo> getAllCompanies();
 
     int deleteByPrimaryKey(Integer id);
 
