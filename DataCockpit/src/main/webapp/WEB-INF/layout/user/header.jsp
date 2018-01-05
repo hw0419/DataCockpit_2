@@ -6,7 +6,6 @@
     <!-- Logo -->
     <a href="./user_second.shtml" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>数据</b>舱</span>
       <!-- logo for regular state and mobile devices -->
       <span class="logo-lg"><b>数据</b>驾驶舱</span>
     </a>
@@ -36,7 +35,7 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="dist/img/yonghu.png" class="img-circle" alt="User Image">
+          <img src="dist/img/yhh.png" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           <p>${infos.name }&emsp;${infos.job }</p>
@@ -62,8 +61,9 @@
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header"></li>
         <!-- Optionally, you can add icons to the links -->
+        <li class="active"><a href="./user_index.shtml"><i class="fa fa-link"></i> <span>首页</span></a></li>
 
-        <li class="active"><a href="./selectTongzhi.shtml"><i class="fa fa-link"></i> <span>通知中心</span></a></li>
+        <li class="tongzhi"><a href="./selectTongzhi.shtml"><i class="fa fa-link"></i> <span>通知中心</span></a></li>
 
         <li class="treeview gerens">
           <a href="#"><i class="fa fa-link"></i> <span>个人中心</span>
@@ -71,6 +71,7 @@
                 <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
+          
           <ul class="treeview-menu">
             <li class="geren1"><a href="./updateInfo.shtml?phone=${infos.phone }">&emsp;<i class="fa fa-genderless"></i>资料修改</a></li>
             <li class="geren2"><a href="./updatePassword.shtml">&emsp;<i class="fa fa-genderless"></i>修改密码</a></li>
@@ -83,6 +84,7 @@
                 <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
+          
           <ul class="treeview-menu">
             <li class="shuju4"><a href="./user_guanxitu.shtml">&emsp;<i class="fa fa-genderless"></i>数据关系图</a></li>
             <li class="shuju1"><a href="./user_shuju1.shtml">&emsp;<i class="fa fa-genderless"></i>数据表管理</a></li>
