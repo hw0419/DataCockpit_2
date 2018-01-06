@@ -40,11 +40,11 @@
 											rowspan="1" colspan="1" aria-sort="ascending"
 											aria-label="Rendering engine: activate to sort column descending"
 											style="text-align: center;">序号</th>
-										<th class="sorting" tabindex="0" aria-controls="example2"
+										<th class="" tabindex="0" aria-controls="example2"
 											rowspan="1" colspan="1"
 											aria-label="Platform(s): activate to sort column ascending"
 											style="text-align: center;">所属企业</th>
-										<th class="sorting" tabindex="0" aria-controls="example2"
+										<th class="" tabindex="0" aria-controls="example2"
 											rowspan="1" colspan="1"
 											aria-label="Engine version: activate to sort column ascending"
 											style="text-align: center;">操作</th>
