@@ -107,6 +107,7 @@
     	localStorage.tongzhi="tongzhi";
     	if(checks == localStorage.tongzhi){
     		$("ul li").removeClass("active")
+    		$(".tongzhi").addClass("active")
     	}
     	if(checks == localStorage.shuju1){
     		$("ul li").removeClass("active")

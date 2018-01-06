@@ -1,23 +1,26 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
-    pageEncoding="utf-8"%>
-<%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles" %>
-<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>  
-<%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>  
-<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%> 
+	pageEncoding="utf-8"%>
+<%@ taglib uri="http://tiles.apache.org/tags-tiles" prefix="tiles"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/functions" prefix="fn"%>
+<%@taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <%
 	String context = request.getContextPath();
-	String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+context+"/";
+	String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort()
+			+ context + "/";
 %>
 
 <!DOCTYPE html  >
 <html>
 <head>
-  <base href="<%=basePath %>">
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>管理员页面</title>
-   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
-   	<tiles:insertAttribute name="linkCSS" />
+<base href="<%=basePath%>">
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>管理员页面</title>
+<meta
+	content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+	name="viewport">
+<tiles:insertAttribute name="linkCSS" />
 </head>
 <!--
 BODY TAG OPTIONS:
@@ -41,28 +44,22 @@ desired effect
 -->
 <body class="hold-transition skin-blue sidebar-mini">
 
-<div class="wrapper">
-	<tiles:insertAttribute name="header" />
+	<div class="wrapper">
+		<tiles:insertAttribute name="header" />
+		<!-- Content Wrapper. Contains page content  主内容开始 -->
+		<div class="content-wrapper">
+			<tiles:insertAttribute name="body" />
+		</div>
+		<tiles:insertAttribute name="footer" />
+	</div>
+	<!-- /.content-wrapper    主内容结束 -->
 
-
-  <!-- Content Wrapper. Contains page content     主内容开始 -->
-  <div class="content-wrapper">
-	<tiles:insertAttribute name="body" />
-
-
-
- </div>
-	<tiles:insertAttribute name="footer" />
- </div>
-  <!-- /.content-wrapper    主内容结束 -->
-
-<!-- REQUIRED JS SCRIPTS -->
-<tiles:insertAttribute name="linkJS" />
-
-
-<!-- Optionally, you can add Slimscroll and FastClick plugins.
+	<!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the
      user experience. -->
-<tiles:insertAttribute name="scripts" />
+	<tiles:insertAttribute name="scripts" />
+
+	<!-- REQUIRED JS SCRIPTS -->
+	<tiles:insertAttribute name="linkJS" />
 </body>
 </html>
