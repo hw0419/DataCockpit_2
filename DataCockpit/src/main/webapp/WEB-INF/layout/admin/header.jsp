@@ -7,9 +7,9 @@
     <!-- Logo -->
     <a href="./selectAllCompanyinfo.shtml" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
-      <span class="logo-mini"><b>数据</b>舱</span>
+      <!-- <span class="logo-mini"><b>数据</b>舱</span> -->
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>数据</b>驾驶舱</span>
+      <span class="logo-lg" style="margin-right: 20px"><b><img alt="数据驾驶舱" src="dist/img/shujus.png" width="32px" height="32px"> 数据</b>驾驶舱</span>
     </a>
 
     <!-- Header Navbar -->
@@ -36,38 +36,36 @@
       <!-- Sidebar user panel (optional) -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="dist/img/manager.png" class="img-circle" alt="User Image">
+          <img src="dist/img/admins.png" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           <p>${infos.name }&emsp;${infos.job }</p>
           <a><i class="fa fa-circle text-success"></i> 在线</a>
-      
         </div>
       </div>
 
       <!-- search form (Optional) -->
-     <!--  <form action="#" method="get" class="sidebar-form">
-       <div class="input-group">
-         <input type="text" name="q" class="form-control" placeholder="Search...">
-         <span class="input-group-btn">
-             <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
-             </button>
-           </span>
-       </div>
-     </form> -->
+	     <form action="#" method="get" class="sidebar-form">
+	        <div class="input-group">
+	          <input type="text" name="q" class="form-control" placeholder="Search...">
+	              <span class="input-group-btn">
+	                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+	                </button>
+	              </span>
+	        </div>
+	      </form>
       <!-- /.search form -->
 
       <!-- Sidebar Menu -->
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header"></li>
         <!-- Optionally, you can add icons to the links -->
-        <li class="shenhe"><a href="./admin_userDsh.shtml"><i class="fa fa-link"></i> <span>待审核用户列表</span></a></li>
-        <li class="tongzhi" ><a href="./admin_tongzhi1.shtml"><i class="fa fa-link"></i> <span>通知管理</span></a></li>
-        <%-- <c:hasRole name="supereme">  --%><li class="zhanghao" ><a href="./admin_shuju4.shtml"><i class="fa fa-link"></i> <span>后台账号管理</span></a></li><%-- </c:hasRole> --%>
-        <!-- <li class="zhanghao" ><a href="./admin_shuju4.shtml"><i class="fa fa-link"></i> <span>后台账号管理</span></a></li> -->
-        <li class="yonghu" ><a href="./admin_userMan.shtml"><i class="fa fa-link"></i> <span>用户管理</span></a></li>
+        <li class="tongzhi" ><a href="./admin_tongzhi1.shtml"><i class="fa fa-comments-o"></i> <span>通知管理</span></a></li>
+        <li class="yonghu" ><a href="./admin_userMan.shtml"><i class="fa fa-group"></i> <span>用户管理</span></a></li>
+        <li class="shenhe"><a href="./admin_userDsh.shtml"><i class="fa fa-user-plus"></i> <span>待审核用户列表</span></a></li>
+        <%-- <c:hasRole name="supereme">  --%>
         <li class="qiye treeview1">
-          <a href="./admin_cominfo.shtml"><i class="fa fa-link"></i> <span>企业数据管理</span>
+          <a href="./admin_cominfo.shtml"><i class="fa fa-pie-chart"></i> <span>企业数据管理</span>
             <span class="pull-right-container">
                 <!-- <i class="fa fa-angle-left pull-right"></i> -->
                  <i class="aaaabbb"></i>
@@ -79,6 +77,8 @@
             <li><a href="./admin_shuju1.shtml">&emsp;<i class="fa fa-genderless"></i>万达房地产开发有限公司</a></li>
           </ul> -->
         </li>
+        <li class="zhanghao" ><a href="./admin_shuju4.shtml"><i class="fa fa-tasks"></i> <span>后台账号管理</span></a></li><%-- </c:hasRole> --%>
+        <!-- <li class="zhanghao" ><a href="./admin_shuju4.shtml"><i class="fa fa-link"></i> <span>后台账号管理</span></a></li> -->
 
       </ul>
       <script type="text/javascript">

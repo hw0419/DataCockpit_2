@@ -305,7 +305,7 @@ public class LoginController {
 	public String selectTongzhi(Model model) {
 		List<Info> lists = infoService.selectAllInfo();
 		model.addAttribute("infoList", lists);
-		model.addAttribute("checks", "active");
+		model.addAttribute("checks", "tongzhi");
 		return "user_tongzhi.pages";
 	}
 }
