@@ -298,7 +298,6 @@ public class LoginController {
 
 	/**
 	 * 公告详情
-	 * 
 	 * @param req
 	 * @return
 	 */
@@ -306,6 +305,7 @@ public class LoginController {
 	public String selectTongzhi(Model model) {
 		List<Info> lists = infoService.selectAllInfo();
 		model.addAttribute("infoList", lists);
+		model.addAttribute("checks", "active");
 		return "user_tongzhi.pages";
 	}
 }
