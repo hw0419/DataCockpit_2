@@ -132,82 +132,149 @@
 	<!-- 系统消息以下 -->
 	<div class="box box-default"
 		style="width: 49%; float: right; border-top-color: #F39C12">
-			<div class="box-tools pull-right">
-				<button type="button" class="btn btn-box-tool"
-					data-widget="collapse">
-					<i class="fa fa-minus"></i>
-				</button>
+		<div class="box-tools pull-right">
+			<button type="button" class="btn btn-box-tool" data-widget="collapse">
+				<i class="fa fa-minus"></i>
+			</button>
+		</div>
+
+		<div class="box">
+			<div class="box-header">
+				<h3 class="box-title" style="font-weight: bolder;">任务信息</h3>
 			</div>
-			
-			<div class="box">
-            <div class="box-header">
-              <h3 class="box-title" style="font-weight: bolder;">任务信息</h3>
-            </div>
-            <!-- /.box-header -->
-            <div class="box-body no-padding">
-              <table class="table table-condensed">
-                <tbody><tr>
-                  <th style="width: 10px"></th>
-                  <th>任务名称</th>
-                  <th>状态</th>
-                  <th style="width: 40px">进度</th>
-                </tr>
-                <tr>
-                  <td>1.</td>
-                  <td>销售数据表分析</td>
-                  <td>
-                    <div class="progress progress-xs">
-                      <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
-                    </div>
-                  </td>
-                  <td><span class="badge bg-red">55%</span></td>
-                </tr>
-                <tr>
-                  <td>2.</td>
-                  <td>到访数据表分析</td>
-                  <td>
-                    <div class="progress progress-xs">
-                      <div class="progress-bar progress-bar-yellow" style="width: 70%"></div>
-                    </div>
-                  </td>
-                  <td><span class="badge bg-yellow">70%</span></td>
-                </tr>
-                <tr>
-                  <td>3.</td>
-                  <td>认筹数据表分析</td>
-                  <td>
-                    <div class="progress progress-xs progress-striped active">
-                      <div class="progress-bar progress-bar-primary" style="width: 30%"></div>
-                    </div>
-                  </td>
-                  <td><span class="badge bg-light-blue">30%</span></td>
-                </tr>
-                <tr>
-                  <td>4.</td>
-                  <td>媒体渠道数据表分析</td>
-                  <td>
-                    <div class="progress progress-xs progress-striped active">
-                      <div class="progress-bar progress-bar-success" style="width: 90%"></div>
-                    </div>
-                  </td>
-                  <td><span class="badge bg-green">90%</span></td>
-                </tr>
-              </tbody></table>
-            <!-- /.box-body -->
-          </div>
-			
-			
+			<!-- /.box-header -->
+			<div class="box-body no-padding">
+				<table class="table table-condensed">
+					<tbody>
+						<tr>
+							<th style="width: 10px"></th>
+							<th>任务名称</th>
+							<th>状态</th>
+							<th style="width: 40px">进度</th>
+						</tr>
+						<tr>
+							<td>1.</td>
+							<td>销售数据表分析</td>
+							<td>
+								<div class="progress progress-xs">
+									<div class="progress-bar progress-bar-danger"
+										style="width: 55%"></div>
+								</div>
+							</td>
+							<td><span class="badge bg-red">55%</span></td>
+						</tr>
+						<tr>
+							<td>2.</td>
+							<td>到访数据表分析</td>
+							<td>
+								<div class="progress progress-xs">
+									<div class="progress-bar progress-bar-yellow"
+										style="width: 70%"></div>
+								</div>
+							</td>
+							<td><span class="badge bg-yellow">70%</span></td>
+						</tr>
+						<tr>
+							<td>3.</td>
+							<td>认筹数据表分析</td>
+							<td>
+								<div class="progress progress-xs progress-striped active">
+									<div class="progress-bar progress-bar-primary"
+										style="width: 30%"></div>
+								</div>
+							</td>
+							<td><span class="badge bg-light-blue">30%</span></td>
+						</tr>
+						<tr>
+							<td>4.</td>
+							<td>媒体渠道数据表分析</td>
+							<td>
+								<div class="progress progress-xs progress-striped active">
+									<div class="progress-bar progress-bar-success"
+										style="width: 90%"></div>
+								</div>
+							</td>
+							<td><span class="badge bg-green">90%</span></td>
+						</tr>
+					</tbody>
+				</table>
+				<!-- /.box-body -->
+			</div>
+
+
 		</div>
 		<!-- /.box-header -->
 	</div>
 	<!-- 系统消息以上 -->
+
+	<!-- 销售数据表图 -->
+	<div class="row">
+		<div class="col-md-12">
+			<div class="box" style="border-top-color: red">
+				<div class="box-header with-border">
+					<h3 class="box-title" style="font-weight: bolder;">销售数据表</h3>
+
+					<div class="box-tools pull-right">
+						<button type="button" class="btn btn-box-tool"
+							data-widget="collapse">
+							<i class="fa fa-minus"></i>
+						</button>
+
+					</div>
+				</div>
+				<!-- /.box-header -->
+				<div class="box-body">
+					<div class="row">
+						<div class="col-md-8">
+							<!-- /.row -->
+						</div>
+						<!-- /.box-footer -->
+					</div>
+					<!-- /.box -->
+				</div>
+				<!-- /.col -->
+			</div>
+			<!-- /.row -->
+		</div>
+	</div>
+
+	<!-- 到访数据表图 -->
+	<div class="row">
+		<div class="col-md-12">
+			<div class="box" style="border-top-color: red">
+				<div class="box-header with-border">
+					<h3 class="box-title" style="font-weight: bolder;">到访数据表</h3>
+
+					<div class="box-tools pull-right">
+						<button type="button" class="btn btn-box-tool"
+							data-widget="collapse">
+							<i class="fa fa-minus"></i>
+						</button>
+
+					</div>
+				</div>
+				<!-- /.box-header -->
+				<div class="box-body">
+					<div class="row">
+						<div class="col-md-8">
+							<!-- /.row -->
+						</div>
+						<!-- /.box-footer -->
+					</div>
+					<!-- /.box -->
+				</div>
+				<!-- /.col -->
+			</div>
+			<!-- /.row -->
+		</div>
+	</div>
 
 	<!-- 数据展示以下  -->
 	<div class="row">
 		<div class="col-md-12">
 			<div class="box" style="border-top-color: red">
 				<div class="box-header with-border">
-					<h3 class="box-title" style="font-weight: bolder;">数据展示</h3>
+					<h3 class="box-title" style="font-weight: bolder;">认筹数据表</h3>
 
 					<div class="box-tools pull-right">
 						<button type="button" class="btn btn-box-tool"
@@ -333,5 +400,7 @@
 	<!-- /.row -->
 
 	<!-- 数据展示以上  -->
+
+
 </section>
 <!-- /.content -->

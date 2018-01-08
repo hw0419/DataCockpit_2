@@ -60,18 +60,10 @@
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header"></li>
         <!-- Optionally, you can add icons to the links -->
-<<<<<<< HEAD
-        <li class="shenhe"><a href="./admin_userDsh.shtml"><i class="fa fa-link"></i> <span>待审核用户列表</span></a></li>
-        <li class="tongzhi" ><a href="./admin_tongzhi1.shtml"><i class="fa fa-link"></i> <span>通知管理</span></a></li>
-        <shiro:hasRole name="super"><li class="zhanghao" ><a href="./admin_shuju4.shtml"><i class="fa fa-link"></i> <span>后台账号管理</span></a></li></shiro:hasRole>
-       <!--  <li class="zhanghao" ><a href="./admin_shuju4.shtml"><i class="fa fa-link"></i> <span>后台账号管理</span></a></li> -->
-        <li class="yonghu" ><a href="./admin_userMan.shtml"><i class="fa fa-link"></i> <span>用户管理</span></a></li>
-=======
         <li class="tongzhi" ><a href="./admin_tongzhi1.shtml"><i class="fa fa-comments-o"></i> <span>通知管理</span></a></li>
         <li class="yonghu" ><a href="./admin_userMan.shtml"><i class="fa fa-group"></i> <span>用户管理</span></a></li>
         <li class="shenhe"><a href="./admin_userDsh.shtml"><i class="fa fa-user-plus"></i> <span>待审核用户列表</span></a></li>
         <%-- <c:hasRole name="supereme">  --%>
->>>>>>> refs/remotes/origin/master
         <li class="qiye treeview1">
           <a href="./admin_cominfo.shtml"><i class="fa fa-pie-chart"></i> <span>企业数据管理</span>
             <span class="pull-right-container">
