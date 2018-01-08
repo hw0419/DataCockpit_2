@@ -178,10 +178,11 @@ public class UserTilesController {
 		return "user_guanxitu.pages";
 	}
 	
-	@RequestMapping("/getTasks")
+	@RequestMapping("/user_getTasks")
 	public String getTasks(Model model) {
-		
-		return "";
+		List<Map<String, Object>> tasks = infoService.getTasks();
+		model.addAttribute("tasks", tasks);
+		return "user_index.pages";
 	}
 
 	@SuppressWarnings("resource")
