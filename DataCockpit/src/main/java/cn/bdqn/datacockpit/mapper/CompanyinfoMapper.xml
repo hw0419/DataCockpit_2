@@ -38,11 +38,8 @@
 	</select>
 
 	<select id="selectByPhone" resultMap="BaseResultMap"
-		parameterType="java.lang.String">
-		select
-		<include refid="Base_Column_List" />
-		from companyinfo
-		where phone = #{phone,jdbcType=VARCHAR}
+		parameterType="String">
+		select * from companyinfo where phone = #{phone,jdbcType=VARCHAR}
 	</select>
 
 	<select id="selectPhoneNum" resultType="Integer" parameterType="java.lang.String">

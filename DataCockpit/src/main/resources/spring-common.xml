@@ -96,7 +96,7 @@
 		            /pages/wangjimima.jsp=anon
 		            /pages/yonghuxieyi.jsp=user
 		            /getYzm.shtml=anon
-		            /login1.shtml=anon
+		            /*.shtml=anon
 		            /**=authc
 		        </value>  
 		    </property>

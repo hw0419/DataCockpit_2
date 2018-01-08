@@ -352,9 +352,32 @@ public class LoginController {
         }
         // 根据用户角色进行页面跳转
         Set<String> roles = userinfo.getRoles(user.getPhone());
+        Userinfo ui = userinfo.getByPhone(user.getPhone());
+        Companyinfo compi = companyinfo.selectByPhone(user.getPhone());
+        List<Map<String, Object>> lists = new ArrayList<Map<String, Object>>();
+        List<Info> infoList = infoService.selectAllInfo();
+        Date time = new Date();
+        Date ti1 = new Date(time.getTime() - 2 * 24 * 60 * 60 * 1000);
+        for (Info info : infoList) {
+            Date date = info.getPublishDate();
+            Map<String, Object> map = new HashMap<String, Object>();
+            if (ti1.before(date)) {
+                map.put("date", 1);
+            } else {
+                map.put("date", 0);
+            }
+
+            map.put("info", info);
+            lists.add(map);
+
+        }
         if (roles.contains("super") || roles.contains("admin")) {
+            session.setAttribute("infos", ui);
+            session.setAttribute("flag", lists);
             return "redirect:/selectAllCompanyinfo.shtml";
         } else if (roles.contains("customer")) {
+            session.setAttribute("infos", compi);
+            session.setAttribute("flag", lists);
             return "redirect:/user_index.shtml";
         }
         session.setAttribute("erroMessage", "*账号或者密码输入有误！");
