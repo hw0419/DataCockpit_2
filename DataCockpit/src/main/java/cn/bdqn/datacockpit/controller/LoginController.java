@@ -308,6 +308,7 @@ public class LoginController {
         // System.out.println(id);
         Info info = infoService.selectByPrimaryKey(id);
         model.addAttribute("gg", info);
+        model.addAttribute("checks", "tongzhi");
         return "user_gongGao.pages";
     }
 
@@ -320,7 +321,7 @@ public class LoginController {
     public String selectTongzhi(Model model) {
         List<Info> lists = infoService.selectAllInfo();
         model.addAttribute("infoList", lists);
-        model.addAttribute("checks", "active");
+        model.addAttribute("checks", "tongzhi");
         return "user_tongzhi.pages";
     }
 

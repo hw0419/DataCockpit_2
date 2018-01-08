@@ -1,4 +1,3 @@
-
 <!-- jQuery 3 -->
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Bootstrap 3.3.7 -->
@@ -8,6 +7,12 @@
 <script src="bower_components/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
 <!-- SlimScroll -->
 <script src="bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<!-- Categore -->
+<script src="dist/js/jquery.flot.min.js"></script>
+<!-- Categore -->
+<script src="dist/js/jquery.flot.pie.min.js"></script>
+<!-- Categore -->
+<script src="dist/js/jquery.flot.resize.min.js"></script>
 <!-- FastClick -->
 <script src="bower_components/fastclick/lib/fastclick.js"></script>
 <!-- AdminLTE App -->
