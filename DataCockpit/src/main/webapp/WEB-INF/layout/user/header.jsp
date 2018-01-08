@@ -7,7 +7,7 @@
     <a href="./user_second.shtml" class="logo">
       <!-- mini logo for sidebar mini 50x50 pixels -->
       <!-- logo for regular state and mobile devices -->
-      <span class="logo-lg"><b>数据</b>驾驶舱</span>
+      <span class="logo-lg" style="margin-right: 20px"><b><img alt="数据驾驶舱" src="dist/img/shujus.png" width="32px" height="32px"> 数据</b>驾驶舱</span>
     </a>
 
     <!-- Header Navbar -->
@@ -46,7 +46,7 @@
       </div>
 
       <!-- search form (Optional) -->
-     <!--  <form action="#" method="get" class="sidebar-form">
+     <form action="#" method="get" class="sidebar-form">
        <div class="input-group">
          <input type="text" name="q" class="form-control" placeholder="Search...">
          <span class="input-group-btn">
@@ -54,19 +54,19 @@
              </button>
            </span>
        </div>
-     </form> -->
+     </form>
       <!-- /.search form -->
 
       <!-- Sidebar Menu -->
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header"></li>
         <!-- Optionally, you can add icons to the links -->
-        <li class="active"><a href="./user_index.shtml"><i class="fa fa-link"></i> <span>首页</span></a></li>
+        <li class="active"><a href="./user_index.shtml"><i class="fa fa-bar-chart"></i> <span>首页</span></a></li>
 
-        <li class="tongzhi"><a href="./selectTongzhi.shtml"><i class="fa fa-link"></i> <span>通知中心</span></a></li>
+        <li class="tongzhi"><a href="./selectTongzhi.shtml"><i class="fa fa-envelope-o"> </i> <span>通知中心</span></a></li>
 
         <li class="treeview gerens">
-          <a href="#"><i class="fa fa-link"></i> <span>个人中心</span>
+          <a href="#"><i class="fa fa-street-view"></i> <span>个人中心</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -79,7 +79,7 @@
         </li>
 
         <li class="treeview shujus">
-          <a href="#"><i class="fa fa-link"></i> <span>数据管理</span>
+          <a href="#"><i class="fa fa-pie-chart"></i> <span> 数据管理</span>
             <span class="pull-right-container">
                 <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -104,6 +104,11 @@
     	localStorage.shuju4="shuju4";
     	localStorage.geren1="geren1";
     	localStorage.geren2="geren2";
+    	localStorage.tongzhi="tongzhi";
+    	if(checks == localStorage.tongzhi){
+    		$("ul li").removeClass("active")
+    		$(".tongzhi").addClass("active")
+    	}
     	if(checks == localStorage.shuju1){
     		$("ul li").removeClass("active")
     		$(".shujus").addClass("active")

@@ -172,8 +172,16 @@ public class UserTilesController {
 
 	@RequestMapping("/user_guanxitu")
 	public String userGuanxitu(Model model) {
+		List<Map<String, Object>> infoList = infoService.getAll();
 		model.addAttribute("checks", "shuju4");
+		model.addAttribute("infoList", infoList);
 		return "user_guanxitu.pages";
+	}
+	
+	@RequestMapping("/getTasks")
+	public String getTasks(Model model) {
+		
+		return "";
 	}
 
 	@SuppressWarnings("resource")
@@ -280,5 +288,7 @@ public class UserTilesController {
 		maps.put("flag", "1");
 		return maps;
 	}
+	
+	
 
 }

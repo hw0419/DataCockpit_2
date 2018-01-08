@@ -10,6 +10,7 @@
 package cn.bdqn.datacockpit.service.impl;
 
 import java.util.List;
+import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -75,6 +76,16 @@ public class InfoServiceImpl implements InfoService {
     @Override
     public Integer selectMaxId() {
         return infoMapper.selectMaxId();
+    }
+    
+    @Override
+    public List<Map<String, Object>> getAll() {
+        return infoMapper.getAllInfos();
+    }
+    
+    @Override
+    public List<Map<String, Object>> getTasks() {
+        return infoMapper.getTasks();
     }
 
 }

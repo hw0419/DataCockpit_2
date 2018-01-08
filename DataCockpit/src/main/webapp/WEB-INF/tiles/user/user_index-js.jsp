@@ -11,5 +11,4 @@
       'autoWidth'   : false
     })
   })
-
 </script>

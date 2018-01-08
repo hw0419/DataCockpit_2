@@ -10,6 +10,7 @@
 package cn.bdqn.datacockpit.service;
 
 import java.util.List;
+import java.util.Map;
 
 import cn.bdqn.datacockpit.entity.Info;
 
@@ -38,4 +39,8 @@ public interface InfoService {
     int updateByPrimaryKey(Info record);
 
     Integer selectMaxId();
+
+    List<Map<String, Object>> getAll();
+
+	List<Map<String, Object>> getTasks();
 }

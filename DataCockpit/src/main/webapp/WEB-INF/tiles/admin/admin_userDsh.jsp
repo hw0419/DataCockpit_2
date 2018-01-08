@@ -72,10 +72,10 @@
 												rowspan="1" colspan="1"
 												aria-label="Engine version: activate to sort column ascending"
 												style="text-align: center;">状态</th> -->
-										<th class="sorting" tabindex="0" aria-controls="example2"
+										<th class="" tabindex="0" aria-controls="example2"
 											rowspan="1" colspan="1"
 											aria-label="Engine version: activate to sort column ascending"
-											style="text-align: center;">操作</th>
+											style="text-align: center;width: 110px">操作</th>
 									</tr>
 								</thead>
 								<tbody style="text-align: center;">								

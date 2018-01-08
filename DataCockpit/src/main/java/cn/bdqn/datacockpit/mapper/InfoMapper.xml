@@ -17,6 +17,14 @@
     from inform
     where id = #{id,jdbcType=INTEGER}
   </select>
+  <select id="getAllInfos" resultType="map">
+  	 select name from tableinfos
+  </select>
+  
+  <select id="getTasks" resultType="map">
+	SELECT starttime,endtime,taskstatus FROM analysistasks
+  </select>
+  
   <select id="selectAllInfo" resultMap="BaseResultMap">
    select * from inform order by publish_date desc
   </select>
