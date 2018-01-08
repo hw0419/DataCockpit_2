@@ -55,8 +55,20 @@
 		proxy-target-class="true" />
 		
 		
-	<!-- 自定义Realm -->
-		<bean id="myRealm" class="cn.bdqn.datacockpit.realm.MyRealm"/>  
+	<!--自定义Realm 
+		<bean id="myRealm" class="cn.bdqn.datacockpit.realm.MyRealm"/> -->  
+		<!-- 自定义Realm -->
+		<bean id="myRealm" class="cn.bdqn.datacockpit.realm.MyRealm">
+		<property name="credentialsMatcher">
+			<bean class="org.apache.shiro.authc.credential.HashedCredentialsMatcher">
+				<property name="hashAlgorithmName" value="MD5"></property><!-- 指定加密算法 -->
+				<property name="hashIterations" value="1"></property><!-- hashIterations：指定加密次数 -->
+			</bean>
+		</property>
+	</bean>
+
+	
+		
 		
 		<!-- 安全管理器 -->
 		<bean id="securityManager" class="org.apache.shiro.web.mgt.DefaultWebSecurityManager">  
@@ -69,19 +81,23 @@
 		    <property name="securityManager" ref="securityManager"/>
 		    <!-- 身份认证失败，则跳转到登录页面的配置 -->  
 		   <property name="loginUrl" value="/login.jsp"/> 
+		   <!-- 身份认证成功，则跳转到登录页面的配置 --> 
+		   <property name="successUrl" value="/pages/success.jsp" />
 		    <!-- 权限认证失败，则跳转到指定页面 -->  
 		    <property name="unauthorizedUrl" value="/login.jsp"/>  
 		    <!-- Shiro连接约束配置,即过滤链的定义 -->  
 		    <property name="filterChainDefinitions">  
-		        <value>  
-		        	/**=anon
+		        <value> 
+		        	 
+		        	/user_index.shtml=user
+		        	/selectAllCompanyinfo.shtml=user
 		            /login.jsp=anon
 		            /pages/register.jsp=anon
 		            /pages/wangjimima.jsp=anon
-		            /pages/yonghuxieyi.jsp=anon
-		            *.shtml=authc
-		            *.jsp=authc
-		            
+		            /pages/yonghuxieyi.jsp=user
+		            /getYzm.shtml=anon
+		            /login1.shtml=anon
+		            /**=authc
 		        </value>  
 		    </property>
 		</bean>  

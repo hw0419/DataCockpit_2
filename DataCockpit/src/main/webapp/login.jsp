@@ -49,7 +49,7 @@
   </div>
   <!-- /.login-logo -->
   <div class="login-box-body" style="background-color: rgba(54,167,129,.4);">
-    <form action="<%=basePath %>/login.shtml" method="post">
+    <form action="<%=basePath %>/login1.shtml" method="post">
       <div class="form-group has-feedback">
         <input type="text" class="form-control" placeholder="请输入手机号码"  name="phone">
        <!--  <input type="text" class="form-control" placeholder="请输入手机号码"  pattern="1[34578]\d{9}" required="required"  name="phone"> -->
@@ -70,8 +70,8 @@
 		 <div class="col-xs-8">
           <div class="checkbox icheck" style="margin-left:10px">
             <label>
-              <input type="checkbox" name="onLine" value="3"> <span style="color:#272822">下次自动登录</span>
-            	<div><span style="color:yellow">${erroMessage} </span></div>
+              <input type="checkbox" name="onLine" value="true"> <span style="color:#272822">下次自动登录</span>
+            	<div><span class="span" style="color:yellow">${erroMessage} </span></div>
             </label>
           </div>   
         </div>
@@ -122,7 +122,8 @@ var $img=	$(this);
 	$.post("getYzm.shtml", function(data) {
 		$img.attr("src","getYzm.shtml") 
 		});
-})
+});
+
   </script>
 
 
