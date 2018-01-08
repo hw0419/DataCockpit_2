@@ -25,12 +25,11 @@ public class CompanyinfoServiceImpl implements CompanyinfoService {
     public List<Companyinfo> selectAllCompanies() {
         return companyinfo.selectAllCompanies();
     }
-    
+
     @Override
     public List<Companyinfo> getAllCompanies() {
         return companyinfo.getAllCompanies();
     }
-
 
     /**
      * 
@@ -108,7 +107,6 @@ public class CompanyinfoServiceImpl implements CompanyinfoService {
      */
     @Override
     public Companyinfo selectByPhone(String phone) {
-
         return companyinfo.selectByPhone(phone);
     }
 
