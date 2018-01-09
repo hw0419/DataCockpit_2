@@ -51,15 +51,13 @@
             <button type="button" class="close" data-dismiss="modal"
                aria-hidden="true">×
             </button>
-            <h4 class="modal-title" id="myModalLabel">
-               信息显示
+            <h4 class="modal-title" id="myModalLabel">信息显示
             </h4>
          </div>
          
          <div class="modal-body">
          <center>
             <input class="ups1" type="text" size="20" name="upfile" id="upfile" style="border:1px dotted #ccc">  
-
             <input class="ups3"  type="button" value="浏览" onclick="path.click()" style="border:1px solid #ccc;background:#fff">  
             <input class="ups2" type="file" id="path" style="display:none" onchange="upfile.value=this.value">
          </center>   
@@ -69,8 +67,7 @@
             <button type="button" class="btn btn-default"
                data-dismiss="modal">关闭
             </button>
-            <button id="ok_10" type="button" class="btn btn-primary">
-               确定
+            <button id="ok_10" type="button" class="btn btn-primary">确定
             </button>
          </div>
       </div><!-- /.modal-content -->

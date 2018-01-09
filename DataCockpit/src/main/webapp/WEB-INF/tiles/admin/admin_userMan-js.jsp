@@ -1,6 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <script>
 	
+	
   $(function () {
    var t = $('#example1').DataTable({
 		 "ajax"		: {

@@ -1,5 +1,6 @@
-<%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java"
+	isELIgnored="false"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 
 <!-- Content Header (Page header) -->
 <section class="content-header">
@@ -15,9 +16,11 @@
 			<div class="box" style="border-top-color: #DD4B39;">
 				<div class="box-header with-border">
 
-				<a href="./admRegister.jsp" style="color: white;float: left;">
-				<button class="btn btn-primary btn-lg" data-toggle="modal" style="width: 130px;height: 30px;font-size: 14px;line-height: 0px;">添加新用户</button></a>
-				<div class="btn-group"></div>
+					<a href="./admRegister.jsp" style="color: white; float: left;">
+						<button class="btn btn-primary btn-lg" data-toggle="modal"
+							style="width: 130px; height: 30px; font-size: 14px; line-height: 0px;">添加新用户</button>
+					</a>
+					<div class="btn-group"></div>
 
 					<!-- /.box-header -->
 					<!-- /.progress-group -->
@@ -26,7 +29,7 @@
 
 					<!-- 待办事项以下 -->
 					<!-- Main content -->
-					<div id="example2_wrapper"  style="margin-top: 20px;"
+					<div id="example2_wrapper" style="margin-top: 20px;"
 						class="dataTables_wrapper form-inline dt-bootstrap">
 						<div class="row">
 							<div class="col-sm-6"></div>
@@ -67,12 +70,12 @@
 												rowspan="1" colspan="1"
 												aria-label="Engine version: activate to sort column ascending"
 												style="text-align: center;">状态</th> -->
-										<th class="" tabindex="0" aria-controls="example2"
-											rowspan="1" colspan="1"
+										<th class="" tabindex="0" aria-controls="example2" rowspan="1"
+											colspan="1"
 											aria-label="Engine version: activate to sort column ascending"
 											style="text-align: center;">状态</th>
-										<th class="" tabindex="0" aria-controls="example2"
-											rowspan="1" colspan="1"
+										<th class="" tabindex="0" aria-controls="example2" rowspan="1"
+											colspan="1"
 											aria-label="Engine version: activate to sort column ascending"
 											style="text-align: center;">操作</th>
 									</tr>

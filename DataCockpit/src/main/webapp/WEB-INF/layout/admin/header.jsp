@@ -77,12 +77,12 @@
             <li><a href="./admin_shuju1.shtml">&emsp;<i class="fa fa-genderless"></i>万达房地产开发有限公司</a></li>
           </ul> -->
         </li>
-        <li class="zhanghao" ><a href="./admin_shuju4.shtml"><i class="fa fa-tasks"></i> <span>后台账号管理</span></a></li><%-- </c:hasRole> --%>
+       	<shiro:hasRole name="super"><li class="zhanghao" ><a href="./admin_shuju4.shtml"><i class="fa fa-tasks"></i> <span>后台账号管理</span></a></li></shiro:hasRole>
         <!-- <li class="zhanghao" ><a href="./admin_shuju4.shtml"><i class="fa fa-link"></i> <span>后台账号管理</span></a></li> -->
 
       </ul>
       <script type="text/javascript">
-      	var menus = ${menus}
+      	var menus = ${menus }
       	localStorage.menu1="1";
       	localStorage.menu2="2";
       	localStorage.menu3="3";

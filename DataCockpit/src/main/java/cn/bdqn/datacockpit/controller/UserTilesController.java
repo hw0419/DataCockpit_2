@@ -103,6 +103,7 @@ public class UserTilesController {
 	public String shuju3(Model model, HttpServletRequest req) {
 		model.addAttribute("checks", "shuju3");
 		String names = req.getParameter("id");
+		
 		// ChineseToPinYin ctp = new ChineseToPinYin();
 		String name = ChineseToPinYin.getPingYin(names);
 		model.addAttribute("name2", names);
@@ -139,10 +140,8 @@ public class UserTilesController {
 					}
 				}
 				fNums = "[" + fNums + "]";
-
 				String rNums = "";
 				for (int i = 0; i < lists.size(); i++) {
-
 					if (i == lists.size() - 1) {
 						rNums = rNums + lists.get(i).get("renchourenshu");
 					} else {
@@ -153,7 +152,6 @@ public class UserTilesController {
 				model.addAttribute("rNums", rNums);
 				model.addAttribute("fNums", fNums);
 				Set<String> sets = new HashSet<String>();
-
 				for (int i = 0; i < lists.size(); i++) {
 					sets = lists.get(i).keySet();
 				}
@@ -166,7 +164,6 @@ public class UserTilesController {
 				e.printStackTrace();
 			}
 		}
-
 		return "user_shuju3.pages";
 	}
 
@@ -177,7 +174,7 @@ public class UserTilesController {
 		model.addAttribute("infoList", infoList);
 		return "user_guanxitu.pages";
 	}
-	
+
 	@RequestMapping("/user_getTasks")
 	public String getTasks(Model model) {
 		List<Map<String, Object>> tasks = infoService.getTasks();
@@ -188,6 +185,7 @@ public class UserTilesController {
 	@SuppressWarnings("resource")
 	@RequestMapping("/user_uploads")
 	public String upload(Model model, HttpServletRequest req) throws Exception {
+		// System.out.println("我进来了!");
 		String urls = req.getParameter("urls");
 		String tb1 = urls.substring(12);
 		String[] tb2 = tb1.split("\\.");
@@ -198,6 +196,7 @@ public class UserTilesController {
 		List<List<String>> list = poi.read(urls);
 		List<String> head = list.get(0);
 		List<String> heads = new ArrayList<String>();
+		// System.out.println(urls+"^^^"+tb1+"^^^"+tb2+"^^^"+tableName+"^^^^"+list);
 		for (int i = 0; i < head.size(); i++) {
 			if (head.get(i).equals("日期")) {
 				heads.add("times");
@@ -289,7 +288,5 @@ public class UserTilesController {
 		maps.put("flag", "1");
 		return maps;
 	}
-	
-	
 
 }

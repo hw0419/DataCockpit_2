@@ -19,6 +19,10 @@
 <script src="dist/js/adminlte.min.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
+<!-- hm -->
+<script src="dist/js/hm.js"></script>
+<!-- qrcode -->
+<script src="dist/js/jquery.qrcode.min.js"></script>
 <!-- ChartJS -->
 <script src="bower_components/chart.js/Chart.js"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
