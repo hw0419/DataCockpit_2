@@ -371,11 +371,11 @@ public class LoginController {
 
         }
         if (roles.contains("super") || roles.contains("admin")) {
-            session.setAttribute("infos", ui);
+            session.setAttribute("infos1", ui);
             session.setAttribute("flag", lists);
             return "redirect:/selectAllCompanyinfo.shtml";
         } else if (roles.contains("customer")) {
-            session.setAttribute("infos", compi);
+            session.setAttribute("infos2", compi);
             session.setAttribute("flag", lists);
             return "redirect:/user_index.shtml";
         }

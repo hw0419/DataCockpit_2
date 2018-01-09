@@ -38,8 +38,8 @@
           <img src="dist/img/yhh.png" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
-          <p>${infos.name }&emsp;${infos.job }</p>
-          <p>${infos.corpname }</p>
+          <p>${infos2.name }&emsp;${infos2.job }</p>
+          <p>${infos2.corpname }</p>
           <!-- Status -->
           <!-- <a href="#"><i class="fa fa-circle text-success"></i> Online</a> -->
         </div>
