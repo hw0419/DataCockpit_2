@@ -29,7 +29,6 @@ public class MyRealm extends AuthorizingRealm {
         Session session = SecurityUtils.getSubject().getSession();
         String phone = upToken.getUsername();
         Userinfo user1 = userService.getByPhone(phone);
-        System.out.println("------------>" + user1);
         if (null != user1) {
             // 1). principal：认证的实体信息，可以是username,也可以是数据表对应的用户实体类对象
             Object principal = user1.getPhone();
@@ -42,7 +41,6 @@ public class MyRealm extends AuthorizingRealm {
             return info;
         }
         if (user1.getState() == 0) {
-            session.setAttribute("erroMessage", "用户被锁定");
             return null;
         }
         return null;
