@@ -335,8 +335,7 @@ public class LoginController {
             session.setAttribute("erroMessage", "*验证码错误！");
             return "redirect:/login.jsp";
         }
-
-        System.out.println("haha--->" + user);
+        session.setAttribute("phone", user.getPhone());
         if (!currentUser.isAuthenticated()) {
             // 把用户名和密码封装为 UsernamePasswordToken 对象
             UsernamePasswordToken token = new UsernamePasswordToken(user.getPhone(), user.getPassword());
@@ -373,11 +372,11 @@ public class LoginController {
 
         }
         if (roles.contains("super") || roles.contains("admin")) {
-            session.setAttribute("infos", ui);
+            session.setAttribute("infos1", ui);
             session.setAttribute("flag", lists);
             return "redirect:/selectAllCompanyinfo.shtml";
         } else if (roles.contains("customer")) {
-            session.setAttribute("infos", compi);
+            session.setAttribute("infos2", compi);
             session.setAttribute("flag", lists);
             return "redirect:/user_index.shtml";
         }
