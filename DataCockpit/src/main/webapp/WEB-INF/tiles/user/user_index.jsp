@@ -132,166 +132,98 @@
 	<!-- 系统消息以下 -->
 	<div class="box box-default"
 		style="width: 49%; float: right; border-top-color: #F39C12">
-		<div class="box-tools pull-right">
-			<button type="button" class="btn btn-box-tool" data-widget="collapse">
-				<i class="fa fa-minus"></i>
-			</button>
+
+		<div class="box-header">
+			<div class="box-tools pull-right">
+				<button type="button" class="btn btn-box-tool"
+					data-widget="collapse">
+					<i class="fa fa-minus"></i>
+				</button>
+			</div>
+			<h3 class="box-title" style="font-weight: bolder;">任务信息</h3>
 		</div>
-
-		<div class="box">
-			<div class="box-header">
-				<h3 class="box-title" style="font-weight: bolder;">任务信息</h3>
-			</div>
-			<!-- /.box-header -->
-			<div class="box-body no-padding">
-				<table class="table table-condensed">
-					<tbody>
-						<tr>
-							<th style="width: 10px"></th>
-							<th>任务名称</th>
-							<th>状态</th>
-							<th style="width: 40px">进度</th>
-						</tr>
-						<tr>
-							<td>1.</td>
-							<td>销售数据表分析</td>
-							<td>
-								<div class="progress progress-xs">
-									<div class="progress-bar progress-bar-danger"
-										style="width: 55%"></div>
-								</div>
-							</td>
-							<td><span class="badge bg-red">55%</span></td>
-						</tr>
-						<tr>
-							<td>2.</td>
-							<td>到访数据表分析</td>
-							<td>
-								<div class="progress progress-xs">
-									<div class="progress-bar progress-bar-yellow"
-										style="width: 70%"></div>
-								</div>
-							</td>
-							<td><span class="badge bg-yellow">70%</span></td>
-						</tr>
-						<tr>
-							<td>3.</td>
-							<td>认筹数据表分析</td>
-							<td>
-								<div class="progress progress-xs progress-striped active">
-									<div class="progress-bar progress-bar-primary"
-										style="width: 30%"></div>
-								</div>
-							</td>
-							<td><span class="badge bg-light-blue">30%</span></td>
-						</tr>
-						<tr>
-							<td>4.</td>
-							<td>媒体渠道数据表分析</td>
-							<td>
-								<div class="progress progress-xs progress-striped active">
-									<div class="progress-bar progress-bar-success"
-										style="width: 90%"></div>
-								</div>
-							</td>
-							<td><span class="badge bg-green">90%</span></td>
-						</tr>
-					</tbody>
-				</table>
-				<!-- /.box-body -->
-			</div>
-
-
+		<!-- /.box-header -->
+		<div class="box-body no-padding">
+			<table class="table table-condensed">
+				<tbody>
+					<tr>
+						<th style="width: 10px"></th>
+						<th>任务名称</th>
+						<th>状态</th>
+						<th style="width: 40px"></th>
+					</tr>
+					<tr>
+						<td>1.</td>
+						<td>销售数据表分析</td>
+						<td>
+							<div class="progress progress-xs">
+								<div class="progress-bar progress-bar-danger" style="width: 55%"></div>
+							</div>
+						</td>
+						<td><span class="badge bg-red">55%</span></td>
+					</tr>
+					<tr>
+						<td>2.</td>
+						<td>到访数据表分析</td>
+						<td>
+							<div class="progress progress-xs">
+								<div class="progress-bar progress-bar-yellow" style="width: 70%"></div>
+							</div>
+						</td>
+						<td><span class="badge bg-yellow">70%</span></td>
+					</tr>
+					<tr>
+						<td>3.</td>
+						<td>认筹数据表分析</td>
+						<td>
+							<div class="progress progress-xs progress-striped active">
+								<div class="progress-bar progress-bar-primary"
+									style="width: 30%"></div>
+							</div>
+						</td>
+						<td><span class="badge bg-light-blue">30%</span></td>
+					</tr>
+					<tr>
+						<td>4.</td>
+						<td>媒体渠道数据表分析</td>
+						<td>
+							<div class="progress progress-xs progress-striped active">
+								<div class="progress-bar progress-bar-success"
+									style="width: 90%"></div>
+							</div>
+						</td>
+						<td><span class="badge bg-green">90%</span></td>
+					</tr>
+				</tbody>
+			</table>
+			<!-- /.box-body -->
 		</div>
 		<!-- /.box-header -->
 	</div>
 	<!-- 系统消息以上 -->
-
-	<!-- 销售数据表图 -->
-	<div class="row">
-		<div class="col-md-12">
-			<div class="box" style="border-top-color: red">
-				<div class="box-header with-border">
-					<h3 class="box-title" style="font-weight: bolder;">销售数据表</h3>
-
-					<div class="box-tools pull-right">
-						<button type="button" class="btn btn-box-tool"
-							data-widget="collapse">
-							<i class="fa fa-minus"></i>
-						</button>
-
-					</div>
-				</div>
-				<!-- /.box-header -->
-				<div class="box-body">
-					<div class="row">
-						<div class="col-md-8">
-							<!-- /.row -->
-						</div>
-						<!-- /.box-footer -->
-					</div>
-					<!-- /.box -->
-				</div>
-				<!-- /.col -->
-			</div>
-			<!-- /.row -->
-		</div>
-	</div>
-
-	<!-- 到访数据表图 -->
-	<div class="row">
-		<div class="col-md-12">
-			<div class="box" style="border-top-color: red">
-				<div class="box-header with-border">
-					<h3 class="box-title" style="font-weight: bolder;">到访数据表</h3>
-
-					<div class="box-tools pull-right">
-						<button type="button" class="btn btn-box-tool"
-							data-widget="collapse">
-							<i class="fa fa-minus"></i>
-						</button>
-
-					</div>
-				</div>
-				<!-- /.box-header -->
-				<div class="box-body">
-					<div class="row">
-						<div class="col-md-8">
-							<!-- /.row -->
-						</div>
-						<!-- /.box-footer -->
-					</div>
-					<!-- /.box -->
-				</div>
-				<!-- /.col -->
-			</div>
-			<!-- /.row -->
-		</div>
-	</div>
-
+	
 	<!-- 数据展示以下  -->
 	<div class="row">
 		<div class="col-md-12">
 			<div class="box" style="border-top-color: red">
 				<div class="box-header with-border">
 					<h3 class="box-title" style="font-weight: bolder;">认筹数据表</h3>
-
 					<div class="box-tools pull-right">
 						<button type="button" class="btn btn-box-tool"
 							data-widget="collapse">
 							<i class="fa fa-minus"></i>
 						</button>
-
 					</div>
 				</div>
+				
 				<!-- /.box-header -->
+				
 				<div class="box-body">
 					<div class="row">
 						<div class="col-md-8">
 							<p class="text-center">
 								<strong>Sales: 1 Jan, 2014 - 30 Jul, 2014</strong>
 							</p>
-
 							<div class="chart">
 								<!-- Sales Chart Canvas -->
 								<canvas id="salesChart" style="height: 180px;"></canvas>
@@ -393,6 +325,7 @@
 				</div>
 				<!-- /.box-footer -->
 			</div>
+			
 			<!-- /.box -->
 		</div>
 		<!-- /.col -->
@@ -400,7 +333,82 @@
 	<!-- /.row -->
 
 	<!-- 数据展示以上  -->
+	
+	<!-- 实时数据 -->
 
+	<div class="row">
+		<div class="col-xs-12">
+			<!-- interactive chart -->
+			<div class="box box-primary">
+				<div class="box-header with-border">
+					<i class="fa fa-bar-chart-o"></i>
+					<h3 class="box-title" style="font-weight: bolder;">实时数据</h3>
+					<div class="box-tools pull-right">
+						<div class="btn-group" id="realtime" data-toggle="btn-toggle">
+							<button type="button" class="btn btn-default btn-xs active"
+								data-toggle="on">On</button>
+							<button type="button" class="btn btn-default btn-xs"
+								data-toggle="off">Off</button>
+						</div>
+					</div>
+				</div>
+				<div class="box-body">
+					<div id="interactive"
+						style="height: 300px; padding: 0px; position: relative;">
+						<canvas class="flot-base" width="1069" height="300"
+							style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 1069px; height: 300px;"></canvas>
+						<div class="flot-text"
+							style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);">
+							<div class="flot-x-axis flot-x1-axis xAxis x1Axis"
+								style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;">
+								<div class="flot-tick-label tickLabel"
+									style="position: absolute; max-width: 97px; top: 282px; left: 24px; text-align: center;">0</div>
+								<div class="flot-tick-label tickLabel"
+									style="position: absolute; max-width: 97px; top: 282px; left: 124px; text-align: center;">10</div>
+								<div class="flot-tick-label tickLabel"
+									style="position: absolute; max-width: 97px; top: 282px; left: 229px; text-align: center;">20</div>
+								<div class="flot-tick-label tickLabel"
+									style="position: absolute; max-width: 97px; top: 282px; left: 333px; text-align: center;">30</div>
+								<div class="flot-tick-label tickLabel"
+									style="position: absolute; max-width: 97px; top: 282px; left: 438px; text-align: center;">40</div>
+								<div class="flot-tick-label tickLabel"
+									style="position: absolute; max-width: 97px; top: 282px; left: 542px; text-align: center;">50</div>
+								<div class="flot-tick-label tickLabel"
+									style="position: absolute; max-width: 97px; top: 282px; left: 647px; text-align: center;">60</div>
+								<div class="flot-tick-label tickLabel"
+									style="position: absolute; max-width: 97px; top: 282px; left: 751px; text-align: center;">70</div>
+								<div class="flot-tick-label tickLabel"
+									style="position: absolute; max-width: 97px; top: 282px; left: 856px; text-align: center;">80</div>
+								<div class="flot-tick-label tickLabel"
+									style="position: absolute; max-width: 97px; top: 282px; left: 960px; text-align: center;">90</div>
+							</div>
+							<div class="flot-y-axis flot-y1-axis yAxis y1Axis"
+								style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;">
+								<div class="flot-tick-label tickLabel"
+									style="position: absolute; top: 269px; left: 15px; text-align: right;">0</div>
+								<div class="flot-tick-label tickLabel"
+									style="position: absolute; top: 215px; left: 8px; text-align: right;">20</div>
+								<div class="flot-tick-label tickLabel"
+									style="position: absolute; top: 161px; left: 8px; text-align: right;">40</div>
+								<div class="flot-tick-label tickLabel"
+									style="position: absolute; top: 108px; left: 8px; text-align: right;">60</div>
+								<div class="flot-tick-label tickLabel"
+									style="position: absolute; top: 54px; left: 8px; text-align: right;">80</div>
+								<div class="flot-tick-label tickLabel"
+									style="position: absolute; top: 1px; left: 1px; text-align: right;">100</div>
+							</div>
+						</div>
+						<canvas class="flot-overlay" width="1069" height="300"
+							style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 1069px; height: 300px;"></canvas>
+					</div>
+				</div>
+				<!-- /.box-body-->
+			</div>
+			<!-- /.box -->
 
+		</div>
+		<!-- /.col -->
+	</div>
+	<!-- 实时数据结束 -->
 </section>
 <!-- /.content -->

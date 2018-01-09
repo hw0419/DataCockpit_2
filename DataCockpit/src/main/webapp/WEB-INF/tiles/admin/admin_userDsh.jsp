@@ -75,7 +75,7 @@
 										<th class="" tabindex="0" aria-controls="example2"
 											rowspan="1" colspan="1"
 											aria-label="Engine version: activate to sort column ascending"
-											style="text-align: center;width: 110px">操作</th>
+											style="text-align: center;width: 200px">操作</th>
 									</tr>
 								</thead>
 								<tbody style="text-align: center;">								
