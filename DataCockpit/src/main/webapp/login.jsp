@@ -146,7 +146,7 @@
 										style="font-size: 16px;">登录</button>
 								</div>
 								<div class="row">
-									<a href="<%=basePath %>/pages/register.html" class="text-center"
+									<a href="<%=basePath %>/pages/register.jsp" class="text-center"
 										style="display: block; margin-top: 155px; font-size: 14px; margin-right: 250px;">申请合作</a>
 								</div>
 								<!-- /.col -->

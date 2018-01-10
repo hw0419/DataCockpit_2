@@ -40,6 +40,7 @@ import cn.bdqn.datacockpit.service.CompanyinfoService;
 import cn.bdqn.datacockpit.service.InfoService;
 import cn.bdqn.datacockpit.service.UserinfoService;
 import cn.bdqn.datacockpit.utils.LoggerUtils;
+import cn.bdqn.datacockpit.utils.MD5Utils;
 import cn.bdqn.datacockpit.utils.VerifyCodeUtils;
 
 /**
@@ -193,12 +194,16 @@ public class LoginController {
 
     public String register(Companyinfo cominfo) {
         cominfo.setState(0);
+        String phone = cominfo.getPhone();
+        String password = cominfo.getPassword();
+        String newpwd = MD5Utils.md5(phone, password).toString();
+        cominfo.setPassword(newpwd);
         int flag = companyinfo.insert(cominfo);
         if (flag >= 1) {
-            return "front/shenqing.jsp";
+            return "/WEB-INF/front/shenqing.jsp";
         }
 
-        return "front/error.jsp";
+        return "/WEB-INF/front/error.jsp";
     }
 
     /**

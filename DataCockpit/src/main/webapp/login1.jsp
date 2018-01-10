@@ -82,7 +82,7 @@
        
         <!-- /.col -->
         <div class="col-xs-4" style="font-size: 14px;margin-top: 7px;margin-left:250px;">
-            <a href="<%=basePath %>/pages/register.jsp" class="text-center" style="color: #FFFFFF">申请合作</a>
+            <a href="<%=basePath %>/pages/register1.jsp" class="text-center" style="color: #FFFFFF">申请合作</a>
         </div>
 
        <%--   <div class="col-xs-4" style="font-size: 14px;margin-top: 7px;margin-left:105px">

@@ -3672,10 +3672,10 @@ table.text-center, table.text-center td, table.text-center th {
 }
 
 .login-box-body, .register-box-body {
-	background: #fff;
+	background: rgba(255, 255, 255, .04);
 	padding: 20px;
 	border-top: 0;
-	color: #666
+	color: #fff;
 }
 
 .login-box-body .form-control-feedback, .register-box-body .form-control-feedback
