@@ -172,7 +172,6 @@ public class LoginController {
 				subject.login(token);
 				// Session session2 = subject.getSession();
 				request.getSession().setAttribute("phone", user.getPhone());
-
 				return "redirect:/login2.shtml";
 			} catch (Exception e) {
 				e.printStackTrace();
@@ -209,9 +208,8 @@ public class LoginController {
 	@RequestMapping("/updateInfo")
 	public String updateInfo(HttpServletRequest req) {
 		HttpSession session = req.getSession();
-		Companyinfo compi = (Companyinfo) session.getAttribute("infos");
+		Companyinfo compi = (Companyinfo) session.getAttribute("infos2");
 		session.setAttribute("comp", compi);
-
 		return "redirect:/user_update.shtml";
 	}
 
@@ -243,7 +241,7 @@ public class LoginController {
 	@RequestMapping("/updatePassword")
 	public String updatePassword(HttpServletRequest req) {
 		HttpSession session = req.getSession();
-		Companyinfo compi = (Companyinfo) session.getAttribute("infos");
+		Companyinfo compi = (Companyinfo) session.getAttribute("infos2");
 		session.setAttribute("comp", compi);
 		return "redirect:/user_pass.shtml";
 	}
@@ -373,11 +371,11 @@ public class LoginController {
 
 		}
 		if (roles.contains("super") || roles.contains("admin")) {
-			session.setAttribute("infos", ui);
+			session.setAttribute("infos1", ui);
 			session.setAttribute("flag", lists);
 			return "redirect:/selectAllCompanyinfo.shtml";
 		} else if (roles.contains("customer")) {
-			session.setAttribute("infos", compi);
+			session.setAttribute("infos2", compi);
 			session.setAttribute("flag", lists);
 			return "redirect:/user_index.shtml";
 		}
