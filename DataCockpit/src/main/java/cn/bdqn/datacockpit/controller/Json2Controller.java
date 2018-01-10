@@ -70,7 +70,7 @@ public class Json2Controller {
 			HttpServletRequest req) {
 		DatatableResult<Tableinfo> list = new DatatableResult<>();
 		HttpSession session = req.getSession();
-		Companyinfo cy = (Companyinfo) session.getAttribute("infos");
+		Companyinfo cy = (Companyinfo) session.getAttribute("infos2");
 		Integer id = cy.getId();
 
 		List<Tableinfo> lists = ts.selectAll(id);

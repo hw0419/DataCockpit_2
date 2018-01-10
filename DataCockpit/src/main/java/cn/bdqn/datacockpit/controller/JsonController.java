@@ -29,7 +29,6 @@ import cn.bdqn.datacockpit.service.UserinfoService;
 /**
  * Description: <br/>
  * Date: 2017年8月21日 下午3:45:28 <br/>
- * 
  * @author junwen.bao@airintelli.com
  * @version
  * @see

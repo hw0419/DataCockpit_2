@@ -190,6 +190,7 @@ public class LoginController {
      * @return
      */
     @RequestMapping("/register")
+
     public String register(Companyinfo cominfo) {
         cominfo.setState(0);
         int flag = companyinfo.insert(cominfo);
@@ -241,6 +242,7 @@ public class LoginController {
      * @return
      */
     @RequestMapping("/updatePassword")
+
     public String updatePassword(HttpServletRequest req) {
         HttpSession session = req.getSession();
         Companyinfo compi = (Companyinfo) session.getAttribute("infos");
@@ -255,6 +257,7 @@ public class LoginController {
      * @return
      */
     @RequestMapping("/updatePassword1")
+
     public String updatePassword1(Companyinfo company) {
         int flag = companyinfo.updateByPrimaryKeySelective(company);
         if (flag >= 1) {
@@ -390,5 +393,4 @@ public class LoginController {
         req.setAttribute("erroMessage", "*账号或者密码输入有误！");
         return "/login.jsp";
     }
-
 }

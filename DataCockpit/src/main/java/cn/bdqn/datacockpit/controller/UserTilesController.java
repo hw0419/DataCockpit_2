@@ -67,7 +67,6 @@ public class UserTilesController {
 	/**
 	 * 
 	 * Description: 取通知信息和系统信息并重定向到user_index<br/>
-	 *
 	 * @author dengJ
 	 * @param req
 	 * @return
