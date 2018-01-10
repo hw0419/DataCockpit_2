@@ -380,15 +380,15 @@ public class LoginController {
         }
         if (roles.contains("super") || roles.contains("admin")) {
             session.setAttribute("infos1", ui);
-            session.setAttribute("flag1", lists);
+            session.setAttribute("flag", lists);
             return "redirect:/selectAllCompanyinfo.shtml";
         } else if (roles.contains("customer")) {
             session.setAttribute("infos2", compi);
-            session.setAttribute("flag2", lists);
+            session.setAttribute("flag", lists);
             return "redirect:/user_index.shtml";
         }
-        session.setAttribute("erroMessage", "*账号或者密码输入有误！");
-        return "redirect:/login.jsp";
+        req.setAttribute("erroMessage", "*账号或者密码输入有误！");
+        return "/login.jsp";
     }
 
 }
