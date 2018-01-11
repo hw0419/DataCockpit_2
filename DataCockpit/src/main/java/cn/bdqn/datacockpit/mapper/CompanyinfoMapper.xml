@@ -14,19 +14,24 @@
 	</resultMap>
 
 	<sql id="Base_Column_List">
-		id, corpname, phone, name, job, password, email, state, approval
+		id, corpname, phone, name, job, password, email, state,
+		approval
 	</sql>
 
 	<select id="selectAllCompanies" resultMap="BaseResultMap">
 		select
-		id, corpname, phone, name, job, email, state, approval
-		from companyinfo where approval = 0
+		id, corpname,
+		phone, name, job, email, state, approval
+		from companyinfo where
+		approval = 0
 	</select>
-	
+
 	<select id="getAllCompanies" resultMap="BaseResultMap">
 		select
-		id, corpname, phone, name, job, email, state, approval
-		from companyinfo where approval = 1
+		id, corpname,
+		phone, name, job, email, state, approval
+		from companyinfo where
+		approval = 1
 	</select>
 
 	<select id="selectByPrimaryKey" resultMap="BaseResultMap"
@@ -39,7 +44,8 @@
 
 	<select id="selectByPhone" resultMap="BaseResultMap"
 		parameterType="String">
-		select * from companyinfo where phone = #{phone,jdbcType=VARCHAR}
+		select * from companyinfo where phone =
+		#{phone,jdbcType=VARCHAR}
 	</select>
 
 	<select id="selectPhoneNum" resultType="Integer" parameterType="java.lang.String">
@@ -48,17 +54,21 @@
 	</select>
 
 	<delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-		delete from companyinfo
+		delete from
+		companyinfo
 		where id = #{id,jdbcType=INTEGER}
 	</delete>
 	<insert id="insert" parameterType="cn.bdqn.datacockpit.entity.Companyinfo">
-		insert into companyinfo (id, corpname, phone,
+		insert into companyinfo (id,
+		corpname, phone,
 		name, job, password,
 		email, state, approval
 		)
-		values (#{id,jdbcType=INTEGER}, #{corpname,jdbcType=VARCHAR},
+		values
+		(#{id,jdbcType=INTEGER}, #{corpname,jdbcType=VARCHAR},
 		#{phone,jdbcType=VARCHAR},
-		#{name,jdbcType=VARCHAR}, #{job,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR},
+		#{name,jdbcType=VARCHAR},
+		#{job,jdbcType=VARCHAR}, #{password,jdbcType=VARCHAR},
 		#{email,jdbcType=VARCHAR}, #{state,jdbcType=INTEGER},
 		#{approval,jdbcType=INTEGER}
 		)
@@ -157,13 +167,36 @@
 	<update id="updateByPrimaryKey" parameterType="cn.bdqn.datacockpit.entity.Companyinfo">
 		update companyinfo
 		set corpname = #{corpname,jdbcType=VARCHAR},
-		phone = #{phone,jdbcType=VARCHAR},
+		phone =
+		#{phone,jdbcType=VARCHAR},
 		name = #{name,jdbcType=VARCHAR},
-		job = #{job,jdbcType=VARCHAR},
+		job =
+		#{job,jdbcType=VARCHAR},
 		password = #{password,jdbcType=VARCHAR},
-		email = #{email,jdbcType=VARCHAR},
+		email
+		= #{email,jdbcType=VARCHAR},
 		state = #{state,jdbcType=INTEGER},
 		approval = #{approval,jdbcType=INTEGER}
-		where id = #{id,jdbcType=INTEGER}
+		where id =
+		#{id,jdbcType=INTEGER}
 	</update>
+
+	<insert id="insertUserInfo" parameterType="int">
+		INSERT into
+		userinfo
+		SET
+		userinfo.state=1,userinfo.phone=#{phone},userinfo.name=#{name},userinfo.password=#{password},userinfo.job='客户',userinfo.email=#{email}
+	</insert>
+
+
+	<insert id="insertUser_role" parameterType="int">
+		INSERT into user_role
+		SET user_role.uid=#{0},user_role.rid=3
+	</insert>
+
+	<select id="selectByP" resultType="Integer" parameterType="java.lang.String">
+		SELECT
+		id from userinfo where userinfo.phone=#{0}
+	</select>
+
 </mapper>

@@ -84,4 +84,38 @@ public interface CompanyinfoService {
 	 */
 	int selectPhoneNum(String phone);
 
+	/**
+	 * @author: Li ShuCheng
+	 * @Title: insertUserInfo
+	 * @Description: 已通过审核的用户插入userinfo表格 <br>
+	 * @param:  @param compan
+	 * @param:  @return   
+	 * @return: int   
+	 * @throws
+	 */
+	int insertUserInfo(Companyinfo compan);
+
+	/**
+	 * @author: Li ShuCheng
+	 * @Title: selectIdByp
+	 * @Description: 添加user_role <br>
+	 * @param:  @param phone
+	 * @param:  @return   
+	 * @return: int   
+	 * @throws
+	 */
+	int selectIdByp(String phone);
+
+	/**
+	 * 
+	 * @author: Li ShuCheng
+	 * @Title: insertUser_role
+	 * @Description: 插入权限表 <br>
+	 * @param:  @param num
+	 * @param:  @return   
+	 * @return: int   
+	 * @throws
+	 */
+	int insertUser_role(int num);
+
 }
