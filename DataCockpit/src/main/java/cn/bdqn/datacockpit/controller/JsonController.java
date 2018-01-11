@@ -56,9 +56,14 @@ public class JsonController {
 
 	@ResponseBody
 	@RequestMapping(value = "dt_list2")
-	public DatatableResult<Userinfo> datatable2(@RequestBody SearchCondition searchCondition) {
+	public DatatableResult<Userinfo> datatable2(HttpServletRequest req, @RequestBody SearchCondition searchCondition) {
 		DatatableResult<Userinfo> list = new DatatableResult<>();
 		List<Userinfo> list2 = us.selectAllUserinfo();
+		for (int i = 0; i < list2.size(); i++) {
+			if (list2.get(i).getPhone().equals(req.getSession().getAttribute("phone") + "")) {
+				list2.remove(i);
+			}
+		}
 		list.setData(list2);
 		return list;
 	}
