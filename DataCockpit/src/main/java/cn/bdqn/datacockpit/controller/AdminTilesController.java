@@ -35,6 +35,7 @@ import cn.bdqn.datacockpit.service.TableinfoService;
 import cn.bdqn.datacockpit.service.UserinfoService;
 import cn.bdqn.datacockpit.utils.ChineseToPinYin;
 import cn.bdqn.datacockpit.utils.JdbcUtil;
+import cn.bdqn.datacockpit.utils.MD5Utils;
 
 /**
  * Created by ehsy_it on 2016/8/10.
@@ -174,6 +175,13 @@ public class AdminTilesController {
 		// 获取实体类信息
 		Integer id = Integer.parseInt(req.getParameter("id"));
 		Companyinfo comp = companyinfo.selectByPrimaryKey(id);
+
+		comp.setPassword(MD5Utils.md5(comp.getName(), comp.getPassword()).toString());
+
+		companyinfo.insertUserInfo(comp);
+
+		companyinfo.insertUser_role(comp.getId());
+
 		comp.setApproval(1);
 		companyinfo.updateByPrimaryKey(comp);
 		return "admin_userDsh.page";

@@ -6,23 +6,39 @@ import cn.bdqn.datacockpit.entity.Companyinfo;
 
 public interface CompanyinfoMapper {
 
-    List<Companyinfo> selectAllCompanies();
-    
-    List<Companyinfo> getAllCompanies();
+	List<Companyinfo> selectAllCompanies();
 
-    int deleteByPrimaryKey(Integer id);
+	List<Companyinfo> getAllCompanies();
 
-    int insert(Companyinfo record);
+	int deleteByPrimaryKey(Integer id);
 
-    int insertSelective(Companyinfo record);
+	int insert(Companyinfo record);
 
-    Companyinfo selectByPrimaryKey(Integer id);
+	int insertSelective(Companyinfo record);
 
-    Companyinfo selectByPhone(String phone);
+	Companyinfo selectByPrimaryKey(Integer id);
 
-    int updateByPrimaryKeySelective(Companyinfo record);
+	Companyinfo selectByPhone(String phone);
 
-    int updateByPrimaryKey(Companyinfo record);
+	int updateByPrimaryKeySelective(Companyinfo record);
 
-    int selectPhoneNum(String phone);
+	int updateByPrimaryKey(Companyinfo record);
+
+	int selectPhoneNum(String phone);
+
+	/**
+	 * @author: Li ShuCheng
+	 * @Title: insertUserInfo
+	 * @Description: 通过的用户插入userinfo <br>
+	 * @param:  @param companyinfo
+	 * @param:  @return   
+	 * @return: int   
+	 * @throws
+	 */
+	int insertUserInfo(Companyinfo comp);
+
+	int selectByP(String phone);
+
+	int insertUser_role(int num);
+
 }

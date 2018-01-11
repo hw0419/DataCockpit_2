@@ -12,111 +12,133 @@ import cn.bdqn.datacockpit.service.CompanyinfoService;
 @Service
 public class CompanyinfoServiceImpl implements CompanyinfoService {
 
-    @Autowired
-    private CompanyinfoMapper companyinfo;
+	@Autowired
+	private CompanyinfoMapper companyinfo;
 
-    /**
-     * 
-     * 查询所有公司信息.
-     * 
-     * @see cn.bdqn.datacockpit.service.CompanyinfoService#selectAllCompanies()
-     */
-    @Override
-    public List<Companyinfo> selectAllCompanies() {
-        return companyinfo.selectAllCompanies();
-    }
+	/**
+	 * 
+	 * 查询所有公司信息.
+	 * 
+	 * @see cn.bdqn.datacockpit.service.CompanyinfoService#selectAllCompanies()
+	 */
+	@Override
+	public List<Companyinfo> selectAllCompanies() {
+		return companyinfo.selectAllCompanies();
+	}
 
-    @Override
-    public List<Companyinfo> getAllCompanies() {
-        return companyinfo.getAllCompanies();
-    }
+	@Override
+	public List<Companyinfo> getAllCompanies() {
+		return companyinfo.getAllCompanies();
+	}
 
-    /**
-     * 
-     * 根据指定的公司id删除公司客户.
-     * 
-     * @see cn.bdqn.datacockpit.service.CompanyinfoService#deleteByPrimaryKey(java.lang.Integer)
-     */
-    @Override
-    public int deleteByPrimaryKey(Integer id) {
-        int flag = companyinfo.deleteByPrimaryKey(id);
-        return flag;
-    }
+	/**
+	 * 根据指定的公司id删除公司客户.
+	 * 
+	 * @see cn.bdqn.datacockpit.service.CompanyinfoService#deleteByPrimaryKey(java.lang.Integer)
+	 */
+	@Override
+	public int deleteByPrimaryKey(Integer id) {
+		int flag = companyinfo.deleteByPrimaryKey(id);
+		return flag;
+	}
 
-    /**
-     * 
-     * 添加新的公司客户.
-     * 
-     * @see cn.bdqn.datacockpit.service.CompanyinfoService#insert(cn.bdqn.datacockpit.entity.Companyinfo)
-     */
-    @Override
-    public int insert(Companyinfo record) {
-        int flag = companyinfo.insert(record);
-        return flag;
-    }
+	/**
+	 * 
+	 * 添加新的公司客户.
+	 * 
+	 * @see cn.bdqn.datacockpit.service.CompanyinfoService#insert(cn.bdqn.datacockpit.entity.Companyinfo)
+	 */
+	@Override
+	public int insert(Companyinfo record) {
+		int flag = companyinfo.insert(record);
+		return flag;
+	}
 
-    /**
-     * 
-     * 动态查询公司信息.
-     * 
-     * @see cn.bdqn.datacockpit.service.CompanyinfoService#insertSelective(cn.bdqn.datacockpit.entity.Companyinfo)
-     */
-    @Override
-    public int insertSelective(Companyinfo record) {
-        int flag = companyinfo.insertSelective(record);
-        return flag;
-    }
+	/**
+	 * 
+	 * 动态查询公司信息.
+	 * 
+	 * @see cn.bdqn.datacockpit.service.CompanyinfoService#insertSelective(cn.bdqn.datacockpit.entity.Companyinfo)
+	 */
+	@Override
+	public int insertSelective(Companyinfo record) {
+		int flag = companyinfo.insertSelective(record);
+		return flag;
+	}
 
-    /**
-     * 
-     * 查询指定的公司信息.
-     * 
-     * @see cn.bdqn.datacockpit.service.CompanyinfoService#selectByPrimaryKey(java.lang.Integer)
-     */
-    @Override
-    public Companyinfo selectByPrimaryKey(Integer id) {
-        return companyinfo.selectByPrimaryKey(id);
-    }
+	/**
+	 * 
+	 * 查询指定的公司信息.
+	 * 
+	 * @see cn.bdqn.datacockpit.service.CompanyinfoService#selectByPrimaryKey(java.lang.Integer)
+	 */
+	@Override
+	public Companyinfo selectByPrimaryKey(Integer id) {
+		return companyinfo.selectByPrimaryKey(id);
+	}
 
-    /**
-     * 
-     * 动态修改公司客户信息.
-     * 
-     * @see cn.bdqn.datacockpit.service.CompanyinfoService#updateByPrimaryKeySelective(cn.bdqn.datacockpit.entity.Companyinfo)
-     */
-    @Override
-    public int updateByPrimaryKeySelective(Companyinfo record) {
-        int flag = companyinfo.updateByPrimaryKeySelective(record);
-        return flag;
-    }
+	/**
+	 * 
+	 * 动态修改公司客户信息.
+	 * 
+	 * @see cn.bdqn.datacockpit.service.CompanyinfoService#updateByPrimaryKeySelective(cn.bdqn.datacockpit.entity.Companyinfo)
+	 */
+	@Override
+	public int updateByPrimaryKeySelective(Companyinfo record) {
+		int flag = companyinfo.updateByPrimaryKeySelective(record);
+		return flag;
+	}
 
-    /**
-     * 
-     * 修改指定公司的信息.
-     * 
-     * @see cn.bdqn.datacockpit.service.CompanyinfoService#updateByPrimaryKey(cn.bdqn.datacockpit.entity.Companyinfo)
-     */
-    @Override
-    public int updateByPrimaryKey(Companyinfo record) {
-        int flag = companyinfo.updateByPrimaryKey(record);
-        return flag;
-    }
+	/**
+	 * 
+	 * 修改指定公司的信息.
+	 * 
+	 * @see cn.bdqn.datacockpit.service.CompanyinfoService#updateByPrimaryKey(cn.bdqn.datacockpit.entity.Companyinfo)
+	 */
+	@Override
+	public int updateByPrimaryKey(Companyinfo record) {
+		int flag = companyinfo.updateByPrimaryKey(record);
+		return flag;
+	}
 
-    /**
-     * 根据phone查询登录状况
-     */
-    @Override
-    public Companyinfo selectByPhone(String phone) {
-        return companyinfo.selectByPhone(phone);
-    }
+	/**
+	 * 根据phone查询登录状况
+	 */
+	@Override
+	public Companyinfo selectByPhone(String phone) {
+		return companyinfo.selectByPhone(phone);
+	}
 
-    /**
-     * 根据phone查注册号码是否存在
-     */
-    @Override
-    public int selectPhoneNum(String phone) {
+	/**
+	 * 根据phone查注册号码是否存在
+	 */
+	@Override
+	public int selectPhoneNum(String phone) {
 
-        return companyinfo.selectPhoneNum(phone);
-    }
+		return companyinfo.selectPhoneNum(phone);
+	}
+
+	/**
+	 * <p>Title: insertUserInfo</p>
+	 * <p>Description: </p>
+	 * @param compan
+	 * @return
+	 * @see cn.bdqn.datacockpit.service.CompanyinfoService#insertUserInfo(cn.bdqn.datacockpit.entity.Companyinfo)
+	 */
+	@Override
+	public int insertUserInfo(Companyinfo compan) {
+
+		return companyinfo.insertUserInfo(compan);
+	}
+
+	@Override
+	public int selectIdByp(String phone) {
+		return companyinfo.selectByP(phone);
+	}
+
+	@Override
+	public int insertUser_role(int num) {
+		return companyinfo.insertUser_role(num);
+	}
 
 }
