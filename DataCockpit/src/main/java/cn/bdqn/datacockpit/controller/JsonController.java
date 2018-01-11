@@ -10,6 +10,8 @@ package cn.bdqn.datacockpit.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -29,6 +31,7 @@ import cn.bdqn.datacockpit.service.UserinfoService;
 /**
  * Description: <br/>
  * Date: 2017年8月21日 下午3:45:28 <br/>
+ * 
  * @author junwen.bao@airintelli.com
  * @version
  * @see
@@ -85,9 +88,15 @@ public class JsonController {
 
 	@ResponseBody
 	@RequestMapping(value = "dt_lists5")
-	public DatatableResult<Companyinfo> datatable5(@RequestBody SearchCondition searchCondition) {
+	public DatatableResult<Companyinfo> datatable5(HttpServletRequest req,
+			@RequestBody SearchCondition searchCondition) {
 		DatatableResult<Companyinfo> list = new DatatableResult<>();
 		List<Companyinfo> list2 = cfs.getAllCompanies();
+		for (Companyinfo companyinfo : list2) {
+			if (companyinfo.getPhone().equals(req.getSession().getAttribute("phone") + "")) {
+				companyinfo.setPhone(companyinfo.getPhone() + "(已登陆)");
+			}
+		}
 		list.setData(list2);
 		return list;
 	}

@@ -1,7 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <script>
-	
-	
   $(function () {
    var t = $('#example1').DataTable({
 		 "ajax"		: {
@@ -44,8 +42,7 @@
 		    		     return '<a href="./aduser_update.shtml?id='+row.id+'" class="button button-primary button-rounded button-small" style="font-size: 10.5px;font-weight: bolder; ">编辑</a>';   		    		
 		    		    }
 	 	    	   }
-	      ],	    
-	            
+	      ],
 	});
 		t.on('order.dt search.dt',
 		 function() {

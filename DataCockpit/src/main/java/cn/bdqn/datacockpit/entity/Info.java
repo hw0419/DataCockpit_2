@@ -1,9 +1,15 @@
 package cn.bdqn.datacockpit.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Info {
-    private Integer id;
+public class Info implements Serializable{
+    /** 
+	* @Fields serialVersionUID : TODO(用一句话描述这个变量表示什么) 
+	*/ 
+	private static final long serialVersionUID = 2621829815078688423L;
+
+	private Integer id;
 
     private String title;
 

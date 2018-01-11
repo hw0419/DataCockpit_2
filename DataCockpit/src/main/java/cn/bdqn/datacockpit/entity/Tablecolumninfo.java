@@ -1,7 +1,14 @@
 package cn.bdqn.datacockpit.entity;
 
-public class Tablecolumninfo {
-    private Integer id;
+import java.io.Serializable;
+
+public class Tablecolumninfo implements Serializable{
+    /** 
+	* @Fields serialVersionUID : TODO(用一句话描述这个变量表示什么) 
+	*/ 
+	private static final long serialVersionUID = 4555977769486759980L;
+
+	private Integer id;
 
     private Integer tid;
 

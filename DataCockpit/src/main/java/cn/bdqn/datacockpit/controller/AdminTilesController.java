@@ -203,18 +203,18 @@ public class AdminTilesController {
 	public String aduser_update1(HttpServletRequest req) {
 		// 获取 session 中的 登陆信息
 		String phoneString = req.getSession().getAttribute("phone") + "";
-		System.out.println(phoneString);
+		// System.out.println(phoneString);
 		// 获取实体类信息
 		Integer id = Integer.parseInt(req.getParameter("id"));
 		Companyinfo comp = companyinfo.selectByPrimaryKey(id);
 		System.out.println(comp.getPhone());
 		if (phoneString.equals(comp.getPhone())) {
-			req.setAttribute("phonnn", "s");
-			System.out.println("不对呀");
+			req.setAttribute("p", "(已登陆)");
+			// System.out.println("不对呀");
 		} else {
 			comp.setState(1);
 			companyinfo.updateByPrimaryKey(comp);
-			System.out.println("对呀!");
+			// System.out.println("对呀!");
 		}
 		return "admin_userMan.page";
 	}
@@ -228,18 +228,18 @@ public class AdminTilesController {
 	public String aduser_update0(HttpServletRequest req) {
 		// 获取 session 中的 登陆信息
 		String phoneString = req.getSession().getAttribute("phone") + "";
-		System.out.println(phoneString);
+		// System.out.println(phoneString);
 		// 获取实体类信息
 		Integer id = Integer.parseInt(req.getParameter("id"));
 		Companyinfo comp = companyinfo.selectByPrimaryKey(id);
-		System.out.println(comp.getPhone());
+		// System.out.println(comp.getPhone());
 		if (phoneString.equals(comp.getPhone())) {
 			req.setAttribute("phonnn", "s");
-			System.out.println("不对啊 没成功");
+			// System.out.println("不对啊 没成功");
 		} else {
 			comp.setState(0);
 			companyinfo.updateByPrimaryKey(comp);
-			System.out.println("对呀 没错啊");
+			// System.out.println("对呀 没错啊");
 		}
 		return "admin_userMan.page";
 	}
@@ -324,7 +324,6 @@ public class AdminTilesController {
 		List<Companyinfo> lists = companyinfo.getAllCompanies();
 		model.addAttribute("menus", "4");
 		model.addAttribute("lists", lists);
-
 		// 转发
 		return "admin_userMan.page";
 	}

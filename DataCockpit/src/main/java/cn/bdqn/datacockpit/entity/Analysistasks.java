@@ -1,9 +1,15 @@
 package cn.bdqn.datacockpit.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Analysistasks {
-    private Integer id;
+public class Analysistasks implements Serializable{
+    /** 
+	* @Fields serialVersionUID : TODO(用一句话描述这个变量表示什么) 
+	*/ 
+	private static final long serialVersionUID = -2496512115455070097L;
+
+	private Integer id;
 
     private Date starttime;
     

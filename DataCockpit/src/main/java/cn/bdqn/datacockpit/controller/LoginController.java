@@ -302,7 +302,7 @@ public class LoginController {
     public String exit(HttpServletRequest req) {
         req.getSession().removeAttribute("comp");
 
-        return "front/exit.jsp";
+        return "WEB-INF/front/exit.jsp";
     }
 
     /**

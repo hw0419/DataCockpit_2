@@ -8,6 +8,7 @@
 
 package cn.bdqn.datacockpit.entity;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.Set;
 
@@ -20,9 +21,14 @@ import java.util.Set;
  * @see
  */
 
-public class Userinfo {
+public class Userinfo implements Serializable{
 
-    private Integer id;
+    /** 
+	* @Fields serialVersionUID : TODO(用一句话描述这个变量表示什么) 
+	*/ 
+	private static final long serialVersionUID = 8075589196771848220L;
+
+	private Integer id;
 
     private String name;
 
