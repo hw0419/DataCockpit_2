@@ -20,12 +20,12 @@ import java.util.List;
  */
 public class ExcelTest {
 
-    public static void main(String[] args) throws Exception {
+	public static void main(String[] args) throws Exception {
 
-        ExcelUtils el=new ExcelUtils();
-        List<List<String>> mp=el.readXls("E:\\test1.xls");
-        System.err.println(mp.get(0));
-    }
+		ExcelUtils el = new ExcelUtils();
+		List<List<String>> mp = el.readXlsx("E:\\2018年度销售报表.xlsx");
+		System.out.println(mp.get(1));
+
+	}
 
 }
-
