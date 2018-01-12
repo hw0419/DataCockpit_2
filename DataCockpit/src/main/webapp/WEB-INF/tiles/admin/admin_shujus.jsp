@@ -8,8 +8,8 @@
       </h1>
       <ol class="breadcrumb">
         <li><i class="fa fa-dashboard"></i>最近一次的更新时间</li>
-        <li>2017-04-22</li>
-        <li>15:20:33</li>
+        <li>2018-01-15</li>
+        <li>08:08:23</li>
       </ol>
     </section>
 
