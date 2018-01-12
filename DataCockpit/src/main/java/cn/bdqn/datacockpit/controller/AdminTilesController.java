@@ -180,7 +180,7 @@ public class AdminTilesController {
 
 		companyinfo.insertUserInfo(comp);
 
-		companyinfo.insertUser_role(comp.getId());
+		companyinfo.insertUser_role(companyinfo.selectIdByp(comp.getPhone()));
 
 		comp.setApproval(1);
 		companyinfo.updateByPrimaryKey(comp);
