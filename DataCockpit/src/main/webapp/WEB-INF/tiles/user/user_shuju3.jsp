@@ -40,9 +40,9 @@
 								<th>项目名称</th>
 								<th>所在区域</th>
 								<th>日期</th>
-								<th class="people_num">到访人数</th>
-								<th class="people_num">认筹人数</th>
-								<th>退订人数</th>
+								<th class="people_num">研发期</th>
+								<th class="people_num">市值比</th>
+								<th>满意度</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -52,81 +52,77 @@
 
 					<!-- 试试做一个动态图表 -->
 
-	<section class="main">
-			<span class="button-label">尺寸:</span>
-			<input type="radio" name="resize-graph" id="graph-small"><label for="graph-small">小</label>
-			<input type="radio" name="resize-graph" id="graph-normal" checked="checked"><label for="graph-normal">中</label>
-			<input type="radio" name="resize-graph" id="graph-large"><label for="graph-large">大</label>
-			<span class="button-label">颜色:</span>
-			<input type="radio" name="paint-graph" id="graph-blue" checked="checked"><label for="graph-blue">蓝色</label>
-			<input type="radio" name="paint-graph" id="graph-green"><label for="graph-green">绿色</label>
-			<input type="radio" name="paint-graph" id="graph-rainbow"><label for="graph-rainbow">彩虹效果</label>
-			<span class="button-label">产品:</span>
-			<input type="radio" name="fill-graph" id="f-none"><label for="f-none">无</label>
-			<input type="radio" name="fill-graph" id="f-product1" checked="checked"><label for="f-product1">产品1</label>
-			<input type="radio" name="fill-graph" id="f-product2"><label for="f-product2">产品2</label>
-			<input type="radio" name="fill-graph" id="f-product3"><label for="f-product3">产品3</label>
-			<ul class="graph-container">
-				<li>
-					<span>2008</span>
-					<div class="bar-wrapper">
-						<div class="bar-container">
-							<div class="bar-background"></div>
-							<div class="bar-inner">25</div>
-							<div class="bar-foreground"></div>
-						</div>
-					</div>
-				</li>
-				<li>
-					<span>2009</span>
-					<div class="bar-wrapper">
-						<div class="bar-container">
-							<div class="bar-background"></div>
-							<div class="bar-inner">50</div>
-							<div class="bar-foreground"></div>
-						</div>
-					</div>
-				</li>
-				<li>
-					<span>2010</span>
-					<div class="bar-wrapper">
-						<div class="bar-container">
-							<div class="bar-background"></div>
-							<div class="bar-inner">75</div>
-							<div class="bar-foreground"></div>
-						</div>
-					</div>
-				</li>
-				<li>
-					<span>2011</span>
-					<div class="bar-wrapper">
-						<div class="bar-container">
-							<div class="bar-background"></div>
-							<div class="bar-inner">100</div>
-							<div class="bar-foreground"></div>
-						</div>
-					</div>
-				</li>
-				<li>
-					<span>2012</span>
-					<div class="bar-wrapper">
-						<div class="bar-container">
-							<div class="bar-background"></div>
-							<div class="bar-inner">50</div>
-							<div class="bar-foreground"></div>
-						</div>
-					</div>
-				</li>
-				<li>
-					<ul class="graph-marker-container">
-						<li style="bottom:25%;"><span>25%</span></li>
-						<li style="bottom:50%;"><span>50%</span></li>
-						<li style="bottom:75%;"><span>75%</span></li>
-						<li style="bottom:100%;"><span>100%</span></li>
-					</ul>
-				</li>
-			</ul>
-		</section>
+					<section class="main">
+						<span class="button-label">尺寸:</span> <input type="radio"
+							name="resize-graph" id="graph-small"><label
+							for="graph-small">小</label> <input type="radio"
+							name="resize-graph" id="graph-normal" checked="checked"><label
+							for="graph-normal">中</label> <input type="radio"
+							name="resize-graph" id="graph-large"><label
+							for="graph-large">大</label> <span class="button-label">颜色:</span>
+						<input type="radio" name="paint-graph" id="graph-blue"
+							checked="checked"><label for="graph-blue">蓝色</label> <input
+							type="radio" name="paint-graph" id="graph-green"><label
+							for="graph-green">绿色</label> <input type="radio"
+							name="paint-graph" id="graph-rainbow"><label
+							for="graph-rainbow">彩虹效果</label> <span class="button-label">产品:</span>
+						<input type="radio" name="fill-graph" id="f-none"><label
+							for="f-none"> 初始 </label> <input type="radio" name="fill-graph"
+							id="f-product1" checked="checked"><label for="f-product1">研发期</label>
+						<input type="radio" name="fill-graph" id="f-product2"><label
+							for="f-product2">市值比</label> <input type="radio"
+							name="fill-graph" id="f-product3"><label for="f-product3">满意度</label>
+						<ul class="graph-container">
+							<li><span>天下房屋...</span>
+								<div class="bar-wrapper">
+									<div class="bar-container">
+										<div class="bar-background"></div>
+										<div class="bar-inner">25</div>
+										<div class="bar-foreground"></div>
+									</div>
+								</div></li>
+							<li><span>知更鸟AP...</span>
+								<div class="bar-wrapper">
+									<div class="bar-container">
+										<div class="bar-background"></div>
+										<div class="bar-inner">50</div>
+										<div class="bar-foreground"></div>
+									</div>
+								</div></li>
+							<li><span>通达科技...</span>
+								<div class="bar-wrapper">
+									<div class="bar-container">
+										<div class="bar-background"></div>
+										<div class="bar-inner">75</div>
+										<div class="bar-foreground"></div>
+									</div>
+								</div></li>
+							<li><span>金和协同...</span>
+								<div class="bar-wrapper">
+									<div class="bar-container">
+										<div class="bar-background"></div>
+										<div class="bar-inner">100</div>
+										<div class="bar-foreground"></div>
+									</div>
+								</div></li>
+							<li><span>ADOBE多...</span>
+								<div class="bar-wrapper">
+									<div class="bar-container">
+										<div class="bar-background"></div>
+										<div class="bar-inner">50</div>
+										<div class="bar-foreground"></div>
+									</div>
+								</div></li>
+							<li>
+								<ul class="graph-marker-container">
+									<li style="bottom: 25%;"><span>25%</span></li>
+									<li style="bottom: 50%;"><span>50%</span></li>
+									<li style="bottom: 75%;"><span>75%</span></li>
+									<li style="bottom: 100%;"><span>100%</span></li>
+								</ul>
+							</li>
+						</ul>
+					</section>
 
 					<div class="col-md-6">
 						<!-- AREA CHART -->
@@ -232,9 +228,6 @@
 				<center>
 					<textarea id="text-area" cols="70" rows="10"></textarea>
 				</center>
-
-
-
 			</div>
 
 			<div class="modal-footer">
@@ -265,9 +258,7 @@
 					window.location.href = "./user_shuju3.shtml?id=${name2}"
 				}
 			}
-
 		})
-
 	})
 </script>
 
