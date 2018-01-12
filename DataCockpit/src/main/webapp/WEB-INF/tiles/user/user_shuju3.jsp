@@ -8,7 +8,7 @@
 	<h1>数据详情</h1>
 	<ol class="breadcrumb">
 		<li><i class="fa fa-dashboard"></i>最近一次的更新时间</li>
-		<li>2017-04-22</li>
+		<li>2018-01-12</li>
 		<li>15:20:33</li>
 	</ol>
 </section>
@@ -40,9 +40,9 @@
 								<th>项目名称</th>
 								<th>所在区域</th>
 								<th>日期</th>
-								<th class="people_num">研发期</th>
+								<th class="people_num">满意度</th>
 								<th class="people_num">市值比</th>
-								<th>满意度</th>
+								<th>完成度</th>
 							</tr>
 						</thead>
 						<tbody>
@@ -68,7 +68,7 @@
 							for="graph-rainbow">彩虹效果</label> <span class="button-label">产品:</span>
 						<input type="radio" name="fill-graph" id="f-none"><label
 							for="f-none"> 初始 </label> <input type="radio" name="fill-graph"
-							id="f-product1" checked="checked"><label for="f-product1">研发期</label>
+							id="f-product1" checked="checked"><label for="f-product1">完成度</label>
 						<input type="radio" name="fill-graph" id="f-product2"><label
 							for="f-product2">市值比</label> <input type="radio"
 							name="fill-graph" id="f-product3"><label for="f-product3">满意度</label>
