@@ -215,7 +215,7 @@ public class LoginController {
     @RequestMapping("/updateInfo")
     public String updateInfo(HttpServletRequest req) {
         HttpSession session = req.getSession();
-        Companyinfo compi = (Companyinfo) session.getAttribute("infos");
+        Companyinfo compi = (Companyinfo) session.getAttribute("infos2");
         session.setAttribute("comp", compi);
 
         return "redirect:/user_update.shtml";
