@@ -41,8 +41,8 @@
 								<th>所在区域</th>
 								<th>日期</th>
 								<th class="people_num">满意度</th>
-								<th class="people_num">市值比</th>
-								<th>完成度</th>
+								<th class="people_num">完成度</th>
+								<th>市值比</th>
 							</tr>
 						</thead>
 						<tbody>
